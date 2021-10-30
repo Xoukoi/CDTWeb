@@ -298,7 +298,7 @@ namespace Portafo1
         {
             int ween = 0;
             IdTareasBLL idtarr = new IdTareasBLL();
-            int cantidadejecu = idtarr.contarEjecuciones() + 1;
+            int cantidadejecu = idtarr.contarEjecucioness() + 1;
             lblcalendarios.Visible = false;
             labeldatoono.Visible = false;
             lblexito.Visible = false;
@@ -327,14 +327,27 @@ namespace Portafo1
                         ejecu.tareaId = int.Parse(DropDownList8.SelectedValue);
                         EjecucionBLL nuevo = new EjecucionBLL();
 
+                        int carga = idtar.contarCargadeTrabajo(DropDownList7.SelectedValue);
+                        int carga2 = carga + idtar.contarCargadeTrabajoasignadas(DropDownList7.SelectedValue);
 
-                        nuevo.AgregarEjecucion(ejecu);
-
-                        lblexito.Text = "Tarea asignada correctamente";
-                        lblexito.Visible = true;
-                        ween = 1;
-                        Buttonasignar_ModalPopupExtender.Show();
+                        if (carga2 >= 15)
+                        {
+                            ween = 0;
+                            Label36.Visible = true;
+                            Label36.Text = "Funcionario con el maximos de tareas asignadas";
+                            Buttonasignar_ModalPopupExtender.Show();
+                        }
+                        else
+                        {
+                            nuevo.AgregarEjecucion(ejecu);
+                            Label36.Visible = false;
+                            lblexito.Text = "Tarea asignada correctamente";
+                            lblexito.Visible = true;
+                            ween = 1;
+                            Buttonasignar_ModalPopupExtender.Show();
                     }
+
+                }
                     else
                     {
                         lblcalendarios.Text = "La fecha de inicio no puede ser mayor o igual a la de término";

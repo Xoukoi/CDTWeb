@@ -436,6 +436,34 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="ContarejecucionesAceptadas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="rut" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ContarejecucionesAceptadasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ContarejecucionesAceptadasResult" type="tns:ArrayOfIdTarea" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Contarejecucionesporconfirmar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="rut" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ContarejecucionesporconfirmarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ContarejecucionesporconfirmarResult" type="tns:ArrayOfIdTarea" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="ContarProcesos">
         <s:complexType />
       </s:element>
@@ -526,158 +554,6 @@
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:element name="AgregarRol">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="nu" type="tns:RolN" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:complexType name="RolN">
-        <s:sequence>
-          <s:element minOccurs="1" maxOccurs="1" name="IdRol" type="s:int" />
-          <s:element minOccurs="0" maxOccurs="1" name="DescripcionRol" type="s:string" />
-        </s:sequence>
-      </s:complexType>
-      <s:element name="AgregarRolResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="AgregarRolResult" type="s:int" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="ListarRol">
-        <s:complexType />
-      </s:element>
-      <s:element name="ListarRolResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="ListarRolResult" type="tns:ArrayOfRolN" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:complexType name="ArrayOfRolN">
-        <s:sequence>
-          <s:element minOccurs="0" maxOccurs="unbounded" name="RolN" nillable="true" type="tns:RolN" />
-        </s:sequence>
-      </s:complexType>
-      <s:element name="ModificarRol">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="nu" type="tns:RolN" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="ModificarRolResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="ModificarRolResult" type="s:int" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="EliminarRol">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="EliminarRolResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="EliminarRolResult" type="s:int" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="AgregarUnidad">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="nu" type="tns:UnidadInternaN" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:complexType name="UnidadInternaN">
-        <s:sequence>
-          <s:element minOccurs="1" maxOccurs="1" name="IdUnidadInterna" type="s:int" />
-          <s:element minOccurs="0" maxOccurs="1" name="Descripcion" type="s:string" />
-          <s:element minOccurs="1" maxOccurs="1" name="Organizacion" type="s:int" />
-        </s:sequence>
-      </s:complexType>
-      <s:element name="AgregarUnidadResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="AgregarUnidadResult" type="s:int" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="ListarUnidad">
-        <s:complexType />
-      </s:element>
-      <s:element name="ListarUnidadResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="ListarUnidadResult" type="tns:ArrayOfUnidadInternaN" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:complexType name="ArrayOfUnidadInternaN">
-        <s:sequence>
-          <s:element minOccurs="0" maxOccurs="unbounded" name="UnidadInternaN" nillable="true" type="tns:UnidadInternaN" />
-        </s:sequence>
-      </s:complexType>
-      <s:element name="ModificarUnidad">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="nu" type="tns:UnidadInternaN" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="ModificarUnidadResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="ModificarUnidadResult" type="s:int" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="EliminarUnidad">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="EliminarUnidadResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="EliminarUnidadResult" type="s:int" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="ListarEmpresa">
-        <s:complexType />
-      </s:element>
-      <s:element name="ListarEmpresaResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="ListarEmpresaResult" type="tns:ArrayOfEmpresaN" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:complexType name="ArrayOfEmpresaN">
-        <s:sequence>
-          <s:element minOccurs="0" maxOccurs="unbounded" name="EmpresaN" nillable="true" type="tns:EmpresaN" />
-        </s:sequence>
-      </s:complexType>
-      <s:complexType name="EmpresaN">
-        <s:sequence>
-          <s:element minOccurs="0" maxOccurs="1" name="rutEmpresa" type="s:string" />
-          <s:element minOccurs="0" maxOccurs="1" name="nombreEmpresa" type="s:string" />
-          <s:element minOccurs="0" maxOccurs="1" name="direccionEmpresa" type="s:string" />
-          <s:element minOccurs="1" maxOccurs="1" name="telefonoEmpresa" type="s:int" />
-          <s:element minOccurs="0" maxOccurs="1" name="correoEmpresa" type="s:string" />
-          <s:element minOccurs="0" maxOccurs="1" name="rubro" type="s:string" />
-        </s:sequence>
-      </s:complexType>
       <s:element name="AgregarProce">
         <s:complexType>
           <s:sequence>
@@ -899,6 +775,18 @@
   <wsdl:message name="ContarTareasSoapOut">
     <wsdl:part name="parameters" element="tns:ContarTareasResponse" />
   </wsdl:message>
+  <wsdl:message name="ContarejecucionesAceptadasSoapIn">
+    <wsdl:part name="parameters" element="tns:ContarejecucionesAceptadas" />
+  </wsdl:message>
+  <wsdl:message name="ContarejecucionesAceptadasSoapOut">
+    <wsdl:part name="parameters" element="tns:ContarejecucionesAceptadasResponse" />
+  </wsdl:message>
+  <wsdl:message name="ContarejecucionesporconfirmarSoapIn">
+    <wsdl:part name="parameters" element="tns:Contarejecucionesporconfirmar" />
+  </wsdl:message>
+  <wsdl:message name="ContarejecucionesporconfirmarSoapOut">
+    <wsdl:part name="parameters" element="tns:ContarejecucionesporconfirmarResponse" />
+  </wsdl:message>
   <wsdl:message name="ContarProcesosSoapIn">
     <wsdl:part name="parameters" element="tns:ContarProcesos" />
   </wsdl:message>
@@ -940,60 +828,6 @@
   </wsdl:message>
   <wsdl:message name="ContarEstadosTarSoapOut">
     <wsdl:part name="parameters" element="tns:ContarEstadosTarResponse" />
-  </wsdl:message>
-  <wsdl:message name="AgregarRolSoapIn">
-    <wsdl:part name="parameters" element="tns:AgregarRol" />
-  </wsdl:message>
-  <wsdl:message name="AgregarRolSoapOut">
-    <wsdl:part name="parameters" element="tns:AgregarRolResponse" />
-  </wsdl:message>
-  <wsdl:message name="ListarRolSoapIn">
-    <wsdl:part name="parameters" element="tns:ListarRol" />
-  </wsdl:message>
-  <wsdl:message name="ListarRolSoapOut">
-    <wsdl:part name="parameters" element="tns:ListarRolResponse" />
-  </wsdl:message>
-  <wsdl:message name="ModificarRolSoapIn">
-    <wsdl:part name="parameters" element="tns:ModificarRol" />
-  </wsdl:message>
-  <wsdl:message name="ModificarRolSoapOut">
-    <wsdl:part name="parameters" element="tns:ModificarRolResponse" />
-  </wsdl:message>
-  <wsdl:message name="EliminarRolSoapIn">
-    <wsdl:part name="parameters" element="tns:EliminarRol" />
-  </wsdl:message>
-  <wsdl:message name="EliminarRolSoapOut">
-    <wsdl:part name="parameters" element="tns:EliminarRolResponse" />
-  </wsdl:message>
-  <wsdl:message name="AgregarUnidadSoapIn">
-    <wsdl:part name="parameters" element="tns:AgregarUnidad" />
-  </wsdl:message>
-  <wsdl:message name="AgregarUnidadSoapOut">
-    <wsdl:part name="parameters" element="tns:AgregarUnidadResponse" />
-  </wsdl:message>
-  <wsdl:message name="ListarUnidadSoapIn">
-    <wsdl:part name="parameters" element="tns:ListarUnidad" />
-  </wsdl:message>
-  <wsdl:message name="ListarUnidadSoapOut">
-    <wsdl:part name="parameters" element="tns:ListarUnidadResponse" />
-  </wsdl:message>
-  <wsdl:message name="ModificarUnidadSoapIn">
-    <wsdl:part name="parameters" element="tns:ModificarUnidad" />
-  </wsdl:message>
-  <wsdl:message name="ModificarUnidadSoapOut">
-    <wsdl:part name="parameters" element="tns:ModificarUnidadResponse" />
-  </wsdl:message>
-  <wsdl:message name="EliminarUnidadSoapIn">
-    <wsdl:part name="parameters" element="tns:EliminarUnidad" />
-  </wsdl:message>
-  <wsdl:message name="EliminarUnidadSoapOut">
-    <wsdl:part name="parameters" element="tns:EliminarUnidadResponse" />
-  </wsdl:message>
-  <wsdl:message name="ListarEmpresaSoapIn">
-    <wsdl:part name="parameters" element="tns:ListarEmpresa" />
-  </wsdl:message>
-  <wsdl:message name="ListarEmpresaSoapOut">
-    <wsdl:part name="parameters" element="tns:ListarEmpresaResponse" />
   </wsdl:message>
   <wsdl:message name="AgregarProceSoapIn">
     <wsdl:part name="parameters" element="tns:AgregarProce" />
@@ -1128,6 +962,14 @@
       <wsdl:input message="tns:ContarTareasSoapIn" />
       <wsdl:output message="tns:ContarTareasSoapOut" />
     </wsdl:operation>
+    <wsdl:operation name="ContarejecucionesAceptadas">
+      <wsdl:input message="tns:ContarejecucionesAceptadasSoapIn" />
+      <wsdl:output message="tns:ContarejecucionesAceptadasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Contarejecucionesporconfirmar">
+      <wsdl:input message="tns:ContarejecucionesporconfirmarSoapIn" />
+      <wsdl:output message="tns:ContarejecucionesporconfirmarSoapOut" />
+    </wsdl:operation>
     <wsdl:operation name="ContarProcesos">
       <wsdl:input message="tns:ContarProcesosSoapIn" />
       <wsdl:output message="tns:ContarProcesosSoapOut" />
@@ -1155,42 +997,6 @@
     <wsdl:operation name="ContarEstadosTar">
       <wsdl:input message="tns:ContarEstadosTarSoapIn" />
       <wsdl:output message="tns:ContarEstadosTarSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="AgregarRol">
-      <wsdl:input message="tns:AgregarRolSoapIn" />
-      <wsdl:output message="tns:AgregarRolSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="ListarRol">
-      <wsdl:input message="tns:ListarRolSoapIn" />
-      <wsdl:output message="tns:ListarRolSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="ModificarRol">
-      <wsdl:input message="tns:ModificarRolSoapIn" />
-      <wsdl:output message="tns:ModificarRolSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="EliminarRol">
-      <wsdl:input message="tns:EliminarRolSoapIn" />
-      <wsdl:output message="tns:EliminarRolSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="AgregarUnidad">
-      <wsdl:input message="tns:AgregarUnidadSoapIn" />
-      <wsdl:output message="tns:AgregarUnidadSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="ListarUnidad">
-      <wsdl:input message="tns:ListarUnidadSoapIn" />
-      <wsdl:output message="tns:ListarUnidadSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="ModificarUnidad">
-      <wsdl:input message="tns:ModificarUnidadSoapIn" />
-      <wsdl:output message="tns:ModificarUnidadSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="EliminarUnidad">
-      <wsdl:input message="tns:EliminarUnidadSoapIn" />
-      <wsdl:output message="tns:EliminarUnidadSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="ListarEmpresa">
-      <wsdl:input message="tns:ListarEmpresaSoapIn" />
-      <wsdl:output message="tns:ListarEmpresaSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="AgregarProce">
       <wsdl:input message="tns:AgregarProceSoapIn" />
@@ -1454,6 +1260,24 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="ContarejecucionesAceptadas">
+      <soap:operation soapAction="http://tempuri.org/ContarejecucionesAceptadas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Contarejecucionesporconfirmar">
+      <soap:operation soapAction="http://tempuri.org/Contarejecucionesporconfirmar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="ContarProcesos">
       <soap:operation soapAction="http://tempuri.org/ContarProcesos" style="document" />
       <wsdl:input>
@@ -1510,87 +1334,6 @@
     </wsdl:operation>
     <wsdl:operation name="ContarEstadosTar">
       <soap:operation soapAction="http://tempuri.org/ContarEstadosTar" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="AgregarRol">
-      <soap:operation soapAction="http://tempuri.org/AgregarRol" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="ListarRol">
-      <soap:operation soapAction="http://tempuri.org/ListarRol" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="ModificarRol">
-      <soap:operation soapAction="http://tempuri.org/ModificarRol" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="EliminarRol">
-      <soap:operation soapAction="http://tempuri.org/EliminarRol" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="AgregarUnidad">
-      <soap:operation soapAction="http://tempuri.org/AgregarUnidad" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="ListarUnidad">
-      <soap:operation soapAction="http://tempuri.org/ListarUnidad" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="ModificarUnidad">
-      <soap:operation soapAction="http://tempuri.org/ModificarUnidad" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="EliminarUnidad">
-      <soap:operation soapAction="http://tempuri.org/EliminarUnidad" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="ListarEmpresa">
-      <soap:operation soapAction="http://tempuri.org/ListarEmpresa" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1880,6 +1623,24 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="ContarejecucionesAceptadas">
+      <soap12:operation soapAction="http://tempuri.org/ContarejecucionesAceptadas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Contarejecucionesporconfirmar">
+      <soap12:operation soapAction="http://tempuri.org/Contarejecucionesporconfirmar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="ContarProcesos">
       <soap12:operation soapAction="http://tempuri.org/ContarProcesos" style="document" />
       <wsdl:input>
@@ -1936,87 +1697,6 @@
     </wsdl:operation>
     <wsdl:operation name="ContarEstadosTar">
       <soap12:operation soapAction="http://tempuri.org/ContarEstadosTar" style="document" />
-      <wsdl:input>
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="AgregarRol">
-      <soap12:operation soapAction="http://tempuri.org/AgregarRol" style="document" />
-      <wsdl:input>
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="ListarRol">
-      <soap12:operation soapAction="http://tempuri.org/ListarRol" style="document" />
-      <wsdl:input>
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="ModificarRol">
-      <soap12:operation soapAction="http://tempuri.org/ModificarRol" style="document" />
-      <wsdl:input>
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="EliminarRol">
-      <soap12:operation soapAction="http://tempuri.org/EliminarRol" style="document" />
-      <wsdl:input>
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="AgregarUnidad">
-      <soap12:operation soapAction="http://tempuri.org/AgregarUnidad" style="document" />
-      <wsdl:input>
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="ListarUnidad">
-      <soap12:operation soapAction="http://tempuri.org/ListarUnidad" style="document" />
-      <wsdl:input>
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="ModificarUnidad">
-      <soap12:operation soapAction="http://tempuri.org/ModificarUnidad" style="document" />
-      <wsdl:input>
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="EliminarUnidad">
-      <soap12:operation soapAction="http://tempuri.org/EliminarUnidad" style="document" />
-      <wsdl:input>
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="ListarEmpresa">
-      <soap12:operation soapAction="http://tempuri.org/ListarEmpresa" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

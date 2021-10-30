@@ -125,7 +125,14 @@
             </asp:TemplateField>
             <asp:TemplateField HeaderText="Proximidad a la fecha de término">
                 <ItemTemplate>
+                    <div style="background-color:colorrr">
                     <asp:Label ID="Label25" runat="server" Text='<%# Bind("semaforo") %>'></asp:Label>
+                    </div>
+                </ItemTemplate>
+            </asp:TemplateField>
+                        <asp:TemplateField HeaderText="semaforo">
+                <ItemTemplate>
+                    <asp:Label ID="Label13" runat="server" Text='<%# Bind("color") %>'></asp:Label>
                 </ItemTemplate>
             </asp:TemplateField>
                         <asp:TemplateField HeaderText="Nombre tarea">

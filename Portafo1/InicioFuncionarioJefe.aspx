@@ -85,6 +85,8 @@
     </p>
     <p>
 
+                  <asp:Label ID="Label36" runat="server" Text=""></asp:Label>
+
                   </div>
                   <div class="modal-footer">
                       <asp:Button ID="Button2" runat="server" Text="Asignar Tarea" OnClick="Button2_Click2" class="btn btn-primary"/>

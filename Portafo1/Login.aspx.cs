@@ -20,6 +20,14 @@ namespace Portafo1
         protected void Button1_Click(object sender, EventArgs e)
         {
 
+            DateTime thisDay = DateTime.Today;
+            DateTime thisDays = DateTime.Today;
+
+            TimeSpan difFechas = thisDay - thisDays;
+            int sed = difFechas.Days;
+            System.Diagnostics.Debug.WriteLine("aqui taaaa");
+            System.Diagnostics.Debug.WriteLine(sed);
+            System.Diagnostics.Debug.WriteLine("yyyyyyy");
 
             conexion.Open();
             OracleCommand comando = new OracleCommand("SELECT * FROM PERSONAL WHERE RUT = :rute AND CONTRASENIA = :pass", conexion);

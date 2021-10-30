@@ -22,11 +22,13 @@ namespace Portafo1.Negocio
         public string descripcionTarea { get; set; }
         public string observacionTarea { get; set; }
         public string adjudicador { get; set; }
+        
+        public string color { get; set; }
 
         public void AgregarEjecucion(ServiceReference1.EjecucionN item)
         {
             ServiceReference1.WebService1SoapClient wcf = new ServiceReference1.WebService1SoapClient();
-            ServiceReference1.EjecucionN ejecu = new ServiceReference1.EjecucionN();
+            ServiceReference1.EjecucionN  ejecu = new ServiceReference1.EjecucionN();
             wcf.AgregarEjecucion(item);
         }
 
@@ -75,14 +77,30 @@ namespace Portafo1.Negocio
 
             foreach (var item in wcf.ListarEjecucionesAceptadas(rut))
             {
-
                 EjecucionBLL otro = new EjecucionBLL();
                 otro.idEjecu = item.idEjec;
                 otro.descripcionEje = item.descrip;
                 otro.fechaInicio = item.fechaInicio;
                 otro.fechaTermino = item.fechaTermino;
                 otro.FechaEjec = item.fechaEjecucion;
-                otro.semaforo = item.semaforo;
+                DateTime ini = DateTime.Today;
+                DateTime fin = item.fechaTermino;
+
+                TimeSpan difFechas = fin - ini;
+                int sed = difFechas.Days;
+                if (sed >= 7)
+                {
+                    otro.color = "green";
+                }
+                if (sed < 7 && sed > 3)
+                {
+                    otro.color = "yellow";
+                }
+                if (sed <= 3)
+                {
+                    otro.color = "red";
+                }
+                otro.semaforo = ""+sed;
                 otro.notficacion = item.notifi;
                 if (item.tipota == 1)
                 {

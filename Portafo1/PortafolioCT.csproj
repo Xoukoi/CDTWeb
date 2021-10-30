@@ -97,13 +97,7 @@
     <Content Include="Connected Services\ServiceReference1\Portafo1.ServiceReference1.AgregarProceResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\ServiceReference1\Portafo1.ServiceReference1.AgregarRolResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
     <Content Include="Connected Services\ServiceReference1\Portafo1.ServiceReference1.AgregarTarResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServiceReference1\Portafo1.ServiceReference1.AgregarUnidadResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\ServiceReference1\Portafo1.ServiceReference1.BuscarIdProceResponse.datasource">
@@ -119,6 +113,12 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\ServiceReference1\Portafo1.ServiceReference1.cambiarEstadoEjecucionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceReference1\Portafo1.ServiceReference1.ContarejecucionesAceptadasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceReference1\Portafo1.ServiceReference1.ContarejecucionesporconfirmarResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\ServiceReference1\Portafo1.ServiceReference1.ContarEJecucionesResponse.datasource">
@@ -157,9 +157,6 @@
     <Content Include="Connected Services\ServiceReference1\Portafo1.ServiceReference1.eliminarrProceResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\ServiceReference1\Portafo1.ServiceReference1.EmpresaN.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
     <Content Include="Connected Services\ServiceReference1\Portafo1.ServiceReference1.IdTarea.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -175,16 +172,10 @@
     <Content Include="Connected Services\ServiceReference1\Portafo1.ServiceReference1.ListarEjecucionesTerminadasResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\ServiceReference1\Portafo1.ServiceReference1.ListarEmpresaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
     <Content Include="Connected Services\ServiceReference1\Portafo1.ServiceReference1.ListarPersonalAsociadoAUnJefeResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\ServiceReference1\Portafo1.ServiceReference1.ListarProcesoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServiceReference1\Portafo1.ServiceReference1.ListarRolResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\ServiceReference1\Portafo1.ServiceReference1.ListarRutsAsociadosAUnjefeResponse.datasource">
@@ -202,16 +193,7 @@
     <Content Include="Connected Services\ServiceReference1\Portafo1.ServiceReference1.ListarTareaAsResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\ServiceReference1\Portafo1.ServiceReference1.ListarUnidadResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
     <Content Include="Connected Services\ServiceReference1\Portafo1.ServiceReference1.modificarProceResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServiceReference1\Portafo1.ServiceReference1.ModificarRolResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServiceReference1\Portafo1.ServiceReference1.ModificarUnidadResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\ServiceReference1\Portafo1.ServiceReference1.MostrarApelloiResponse.datasource">
@@ -241,13 +223,7 @@
     <Content Include="Connected Services\ServiceReference1\Portafo1.ServiceReference1.ReporteListarEjecucionesRechazadasResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\ServiceReference1\Portafo1.ServiceReference1.RolN.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
     <Content Include="Connected Services\ServiceReference1\Portafo1.ServiceReference1.TareaN.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServiceReference1\Portafo1.ServiceReference1.UnidadInternaN.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <None Include="Connected Services\ServiceReference1\WebService1.disco" />
@@ -943,7 +919,6 @@
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\ServiceReference1\" />
   </ItemGroup>
-  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

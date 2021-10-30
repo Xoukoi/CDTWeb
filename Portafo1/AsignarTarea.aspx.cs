@@ -47,7 +47,7 @@ namespace Portafo1
 
                     IdTareasBLL idtar = new IdTareasBLL();
 
-                    ejecu.idEjec = idtar.contarEjecuciones() + 1;
+                    ejecu.idEjec = idtar.contarEjecucioness() + 1;
                     ejecu.descrip = TextBoxDescr.Text; 
                     ejecu.fechaInicio = Calendar1.SelectedDate.Date;
                     ejecu.fechaTermino = Calendar2.SelectedDate.Date;

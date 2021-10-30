@@ -19,6 +19,7 @@ namespace Portafo1
                 GridView1.DataBind();
                 GridView2.DataSource = nuev.listaEjecucionesAceptadas(Session["rut"].ToString());
                 GridView2.DataBind();
+                string colorrr = "green";
             }
         }
 

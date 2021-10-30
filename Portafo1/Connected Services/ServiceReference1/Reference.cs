@@ -845,265 +845,6 @@ namespace Portafo1.ServiceReference1 {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="RolN", Namespace="http://tempuri.org/")]
-    [System.SerializableAttribute()]
-    public partial class RolN : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        private int IdRolField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string DescripcionRolField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public int IdRol {
-            get {
-                return this.IdRolField;
-            }
-            set {
-                if ((this.IdRolField.Equals(value) != true)) {
-                    this.IdRolField = value;
-                    this.RaisePropertyChanged("IdRol");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
-        public string DescripcionRol {
-            get {
-                return this.DescripcionRolField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.DescripcionRolField, value) != true)) {
-                    this.DescripcionRolField = value;
-                    this.RaisePropertyChanged("DescripcionRol");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="UnidadInternaN", Namespace="http://tempuri.org/")]
-    [System.SerializableAttribute()]
-    public partial class UnidadInternaN : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        private int IdUnidadInternaField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string DescripcionField;
-        
-        private int OrganizacionField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public int IdUnidadInterna {
-            get {
-                return this.IdUnidadInternaField;
-            }
-            set {
-                if ((this.IdUnidadInternaField.Equals(value) != true)) {
-                    this.IdUnidadInternaField = value;
-                    this.RaisePropertyChanged("IdUnidadInterna");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
-        public string Descripcion {
-            get {
-                return this.DescripcionField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.DescripcionField, value) != true)) {
-                    this.DescripcionField = value;
-                    this.RaisePropertyChanged("Descripcion");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=2)]
-        public int Organizacion {
-            get {
-                return this.OrganizacionField;
-            }
-            set {
-                if ((this.OrganizacionField.Equals(value) != true)) {
-                    this.OrganizacionField = value;
-                    this.RaisePropertyChanged("Organizacion");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="EmpresaN", Namespace="http://tempuri.org/")]
-    [System.SerializableAttribute()]
-    public partial class EmpresaN : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string rutEmpresaField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string nombreEmpresaField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string direccionEmpresaField;
-        
-        private int telefonoEmpresaField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string correoEmpresaField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string rubroField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string rutEmpresa {
-            get {
-                return this.rutEmpresaField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.rutEmpresaField, value) != true)) {
-                    this.rutEmpresaField = value;
-                    this.RaisePropertyChanged("rutEmpresa");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
-        public string nombreEmpresa {
-            get {
-                return this.nombreEmpresaField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.nombreEmpresaField, value) != true)) {
-                    this.nombreEmpresaField = value;
-                    this.RaisePropertyChanged("nombreEmpresa");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public string direccionEmpresa {
-            get {
-                return this.direccionEmpresaField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.direccionEmpresaField, value) != true)) {
-                    this.direccionEmpresaField = value;
-                    this.RaisePropertyChanged("direccionEmpresa");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=3)]
-        public int telefonoEmpresa {
-            get {
-                return this.telefonoEmpresaField;
-            }
-            set {
-                if ((this.telefonoEmpresaField.Equals(value) != true)) {
-                    this.telefonoEmpresaField = value;
-                    this.RaisePropertyChanged("telefonoEmpresa");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=4)]
-        public string correoEmpresa {
-            get {
-                return this.correoEmpresaField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.correoEmpresaField, value) != true)) {
-                    this.correoEmpresaField = value;
-                    this.RaisePropertyChanged("correoEmpresa");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=5)]
-        public string rubro {
-            get {
-                return this.rubroField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.rubroField, value) != true)) {
-                    this.rubroField = value;
-                    this.RaisePropertyChanged("rubro");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ProcesoN", Namespace="http://tempuri.org/")]
     [System.SerializableAttribute()]
     public partial class ProcesoN : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
@@ -1447,6 +1188,20 @@ namespace Portafo1.ServiceReference1 {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ContarTareas", ReplyAction="*")]
         System.Threading.Tasks.Task<Portafo1.ServiceReference1.ContarTareasResponse> ContarTareasAsync(Portafo1.ServiceReference1.ContarTareasRequest request);
         
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento rut del espacio de nombres http://tempuri.org/ no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ContarejecucionesAceptadas", ReplyAction="*")]
+        Portafo1.ServiceReference1.ContarejecucionesAceptadasResponse ContarejecucionesAceptadas(Portafo1.ServiceReference1.ContarejecucionesAceptadasRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ContarejecucionesAceptadas", ReplyAction="*")]
+        System.Threading.Tasks.Task<Portafo1.ServiceReference1.ContarejecucionesAceptadasResponse> ContarejecucionesAceptadasAsync(Portafo1.ServiceReference1.ContarejecucionesAceptadasRequest request);
+        
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento rut del espacio de nombres http://tempuri.org/ no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Contarejecucionesporconfirmar", ReplyAction="*")]
+        Portafo1.ServiceReference1.ContarejecucionesporconfirmarResponse Contarejecucionesporconfirmar(Portafo1.ServiceReference1.ContarejecucionesporconfirmarRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Contarejecucionesporconfirmar", ReplyAction="*")]
+        System.Threading.Tasks.Task<Portafo1.ServiceReference1.ContarejecucionesporconfirmarResponse> ContarejecucionesporconfirmarAsync(Portafo1.ServiceReference1.ContarejecucionesporconfirmarRequest request);
+        
         // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento ContarProcesosResult del espacio de nombres http://tempuri.org/ no está marcado para aceptar valores nil.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ContarProcesos", ReplyAction="*")]
         Portafo1.ServiceReference1.ContarProcesosResponse ContarProcesos(Portafo1.ServiceReference1.ContarProcesosRequest request);
@@ -1495,67 +1250,6 @@ namespace Portafo1.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ContarEstadosTar", ReplyAction="*")]
         System.Threading.Tasks.Task<Portafo1.ServiceReference1.ContarEstadosTarResponse> ContarEstadosTarAsync(Portafo1.ServiceReference1.ContarEstadosTarRequest request);
-        
-        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento nu del espacio de nombres http://tempuri.org/ no está marcado para aceptar valores nil.
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AgregarRol", ReplyAction="*")]
-        Portafo1.ServiceReference1.AgregarRolResponse AgregarRol(Portafo1.ServiceReference1.AgregarRolRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AgregarRol", ReplyAction="*")]
-        System.Threading.Tasks.Task<Portafo1.ServiceReference1.AgregarRolResponse> AgregarRolAsync(Portafo1.ServiceReference1.AgregarRolRequest request);
-        
-        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento ListarRolResult del espacio de nombres http://tempuri.org/ no está marcado para aceptar valores nil.
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ListarRol", ReplyAction="*")]
-        Portafo1.ServiceReference1.ListarRolResponse ListarRol(Portafo1.ServiceReference1.ListarRolRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ListarRol", ReplyAction="*")]
-        System.Threading.Tasks.Task<Portafo1.ServiceReference1.ListarRolResponse> ListarRolAsync(Portafo1.ServiceReference1.ListarRolRequest request);
-        
-        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento nu del espacio de nombres http://tempuri.org/ no está marcado para aceptar valores nil.
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ModificarRol", ReplyAction="*")]
-        Portafo1.ServiceReference1.ModificarRolResponse ModificarRol(Portafo1.ServiceReference1.ModificarRolRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ModificarRol", ReplyAction="*")]
-        System.Threading.Tasks.Task<Portafo1.ServiceReference1.ModificarRolResponse> ModificarRolAsync(Portafo1.ServiceReference1.ModificarRolRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/EliminarRol", ReplyAction="*")]
-        int EliminarRol(int id);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/EliminarRol", ReplyAction="*")]
-        System.Threading.Tasks.Task<int> EliminarRolAsync(int id);
-        
-        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento nu del espacio de nombres http://tempuri.org/ no está marcado para aceptar valores nil.
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AgregarUnidad", ReplyAction="*")]
-        Portafo1.ServiceReference1.AgregarUnidadResponse AgregarUnidad(Portafo1.ServiceReference1.AgregarUnidadRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AgregarUnidad", ReplyAction="*")]
-        System.Threading.Tasks.Task<Portafo1.ServiceReference1.AgregarUnidadResponse> AgregarUnidadAsync(Portafo1.ServiceReference1.AgregarUnidadRequest request);
-        
-        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento ListarUnidadResult del espacio de nombres http://tempuri.org/ no está marcado para aceptar valores nil.
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ListarUnidad", ReplyAction="*")]
-        Portafo1.ServiceReference1.ListarUnidadResponse ListarUnidad(Portafo1.ServiceReference1.ListarUnidadRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ListarUnidad", ReplyAction="*")]
-        System.Threading.Tasks.Task<Portafo1.ServiceReference1.ListarUnidadResponse> ListarUnidadAsync(Portafo1.ServiceReference1.ListarUnidadRequest request);
-        
-        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento nu del espacio de nombres http://tempuri.org/ no está marcado para aceptar valores nil.
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ModificarUnidad", ReplyAction="*")]
-        Portafo1.ServiceReference1.ModificarUnidadResponse ModificarUnidad(Portafo1.ServiceReference1.ModificarUnidadRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ModificarUnidad", ReplyAction="*")]
-        System.Threading.Tasks.Task<Portafo1.ServiceReference1.ModificarUnidadResponse> ModificarUnidadAsync(Portafo1.ServiceReference1.ModificarUnidadRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/EliminarUnidad", ReplyAction="*")]
-        int EliminarUnidad(int id);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/EliminarUnidad", ReplyAction="*")]
-        System.Threading.Tasks.Task<int> EliminarUnidadAsync(int id);
-        
-        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento ListarEmpresaResult del espacio de nombres http://tempuri.org/ no está marcado para aceptar valores nil.
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ListarEmpresa", ReplyAction="*")]
-        Portafo1.ServiceReference1.ListarEmpresaResponse ListarEmpresa(Portafo1.ServiceReference1.ListarEmpresaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ListarEmpresa", ReplyAction="*")]
-        System.Threading.Tasks.Task<Portafo1.ServiceReference1.ListarEmpresaResponse> ListarEmpresaAsync(Portafo1.ServiceReference1.ListarEmpresaRequest request);
         
         // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento nu del espacio de nombres http://tempuri.org/ no está marcado para aceptar valores nil.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AgregarProce", ReplyAction="*")]
@@ -3385,6 +3079,142 @@ namespace Portafo1.ServiceReference1 {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class ContarejecucionesAceptadasRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="ContarejecucionesAceptadas", Namespace="http://tempuri.org/", Order=0)]
+        public Portafo1.ServiceReference1.ContarejecucionesAceptadasRequestBody Body;
+        
+        public ContarejecucionesAceptadasRequest() {
+        }
+        
+        public ContarejecucionesAceptadasRequest(Portafo1.ServiceReference1.ContarejecucionesAceptadasRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class ContarejecucionesAceptadasRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string rut;
+        
+        public ContarejecucionesAceptadasRequestBody() {
+        }
+        
+        public ContarejecucionesAceptadasRequestBody(string rut) {
+            this.rut = rut;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class ContarejecucionesAceptadasResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="ContarejecucionesAceptadasResponse", Namespace="http://tempuri.org/", Order=0)]
+        public Portafo1.ServiceReference1.ContarejecucionesAceptadasResponseBody Body;
+        
+        public ContarejecucionesAceptadasResponse() {
+        }
+        
+        public ContarejecucionesAceptadasResponse(Portafo1.ServiceReference1.ContarejecucionesAceptadasResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class ContarejecucionesAceptadasResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public Portafo1.ServiceReference1.IdTarea[] ContarejecucionesAceptadasResult;
+        
+        public ContarejecucionesAceptadasResponseBody() {
+        }
+        
+        public ContarejecucionesAceptadasResponseBody(Portafo1.ServiceReference1.IdTarea[] ContarejecucionesAceptadasResult) {
+            this.ContarejecucionesAceptadasResult = ContarejecucionesAceptadasResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class ContarejecucionesporconfirmarRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="Contarejecucionesporconfirmar", Namespace="http://tempuri.org/", Order=0)]
+        public Portafo1.ServiceReference1.ContarejecucionesporconfirmarRequestBody Body;
+        
+        public ContarejecucionesporconfirmarRequest() {
+        }
+        
+        public ContarejecucionesporconfirmarRequest(Portafo1.ServiceReference1.ContarejecucionesporconfirmarRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class ContarejecucionesporconfirmarRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string rut;
+        
+        public ContarejecucionesporconfirmarRequestBody() {
+        }
+        
+        public ContarejecucionesporconfirmarRequestBody(string rut) {
+            this.rut = rut;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class ContarejecucionesporconfirmarResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="ContarejecucionesporconfirmarResponse", Namespace="http://tempuri.org/", Order=0)]
+        public Portafo1.ServiceReference1.ContarejecucionesporconfirmarResponseBody Body;
+        
+        public ContarejecucionesporconfirmarResponse() {
+        }
+        
+        public ContarejecucionesporconfirmarResponse(Portafo1.ServiceReference1.ContarejecucionesporconfirmarResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class ContarejecucionesporconfirmarResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public Portafo1.ServiceReference1.IdTarea[] ContarejecucionesporconfirmarResult;
+        
+        public ContarejecucionesporconfirmarResponseBody() {
+        }
+        
+        public ContarejecucionesporconfirmarResponseBody(Portafo1.ServiceReference1.IdTarea[] ContarejecucionesporconfirmarResult) {
+            this.ContarejecucionesporconfirmarResult = ContarejecucionesporconfirmarResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class ContarProcesosRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="ContarProcesos", Namespace="http://tempuri.org/", Order=0)]
@@ -3849,461 +3679,6 @@ namespace Portafo1.ServiceReference1 {
         
         public ContarEstadosTarResponseBody(Portafo1.ServiceReference1.IdTarea[] ContarEstadosTarResult) {
             this.ContarEstadosTarResult = ContarEstadosTarResult;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class AgregarRolRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="AgregarRol", Namespace="http://tempuri.org/", Order=0)]
-        public Portafo1.ServiceReference1.AgregarRolRequestBody Body;
-        
-        public AgregarRolRequest() {
-        }
-        
-        public AgregarRolRequest(Portafo1.ServiceReference1.AgregarRolRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class AgregarRolRequestBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public Portafo1.ServiceReference1.RolN nu;
-        
-        public AgregarRolRequestBody() {
-        }
-        
-        public AgregarRolRequestBody(Portafo1.ServiceReference1.RolN nu) {
-            this.nu = nu;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class AgregarRolResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="AgregarRolResponse", Namespace="http://tempuri.org/", Order=0)]
-        public Portafo1.ServiceReference1.AgregarRolResponseBody Body;
-        
-        public AgregarRolResponse() {
-        }
-        
-        public AgregarRolResponse(Portafo1.ServiceReference1.AgregarRolResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class AgregarRolResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
-        public int AgregarRolResult;
-        
-        public AgregarRolResponseBody() {
-        }
-        
-        public AgregarRolResponseBody(int AgregarRolResult) {
-            this.AgregarRolResult = AgregarRolResult;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class ListarRolRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="ListarRol", Namespace="http://tempuri.org/", Order=0)]
-        public Portafo1.ServiceReference1.ListarRolRequestBody Body;
-        
-        public ListarRolRequest() {
-        }
-        
-        public ListarRolRequest(Portafo1.ServiceReference1.ListarRolRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute()]
-    public partial class ListarRolRequestBody {
-        
-        public ListarRolRequestBody() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class ListarRolResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="ListarRolResponse", Namespace="http://tempuri.org/", Order=0)]
-        public Portafo1.ServiceReference1.ListarRolResponseBody Body;
-        
-        public ListarRolResponse() {
-        }
-        
-        public ListarRolResponse(Portafo1.ServiceReference1.ListarRolResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class ListarRolResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public Portafo1.ServiceReference1.RolN[] ListarRolResult;
-        
-        public ListarRolResponseBody() {
-        }
-        
-        public ListarRolResponseBody(Portafo1.ServiceReference1.RolN[] ListarRolResult) {
-            this.ListarRolResult = ListarRolResult;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class ModificarRolRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="ModificarRol", Namespace="http://tempuri.org/", Order=0)]
-        public Portafo1.ServiceReference1.ModificarRolRequestBody Body;
-        
-        public ModificarRolRequest() {
-        }
-        
-        public ModificarRolRequest(Portafo1.ServiceReference1.ModificarRolRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class ModificarRolRequestBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public Portafo1.ServiceReference1.RolN nu;
-        
-        public ModificarRolRequestBody() {
-        }
-        
-        public ModificarRolRequestBody(Portafo1.ServiceReference1.RolN nu) {
-            this.nu = nu;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class ModificarRolResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="ModificarRolResponse", Namespace="http://tempuri.org/", Order=0)]
-        public Portafo1.ServiceReference1.ModificarRolResponseBody Body;
-        
-        public ModificarRolResponse() {
-        }
-        
-        public ModificarRolResponse(Portafo1.ServiceReference1.ModificarRolResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class ModificarRolResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
-        public int ModificarRolResult;
-        
-        public ModificarRolResponseBody() {
-        }
-        
-        public ModificarRolResponseBody(int ModificarRolResult) {
-            this.ModificarRolResult = ModificarRolResult;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class AgregarUnidadRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="AgregarUnidad", Namespace="http://tempuri.org/", Order=0)]
-        public Portafo1.ServiceReference1.AgregarUnidadRequestBody Body;
-        
-        public AgregarUnidadRequest() {
-        }
-        
-        public AgregarUnidadRequest(Portafo1.ServiceReference1.AgregarUnidadRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class AgregarUnidadRequestBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public Portafo1.ServiceReference1.UnidadInternaN nu;
-        
-        public AgregarUnidadRequestBody() {
-        }
-        
-        public AgregarUnidadRequestBody(Portafo1.ServiceReference1.UnidadInternaN nu) {
-            this.nu = nu;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class AgregarUnidadResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="AgregarUnidadResponse", Namespace="http://tempuri.org/", Order=0)]
-        public Portafo1.ServiceReference1.AgregarUnidadResponseBody Body;
-        
-        public AgregarUnidadResponse() {
-        }
-        
-        public AgregarUnidadResponse(Portafo1.ServiceReference1.AgregarUnidadResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class AgregarUnidadResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
-        public int AgregarUnidadResult;
-        
-        public AgregarUnidadResponseBody() {
-        }
-        
-        public AgregarUnidadResponseBody(int AgregarUnidadResult) {
-            this.AgregarUnidadResult = AgregarUnidadResult;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class ListarUnidadRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="ListarUnidad", Namespace="http://tempuri.org/", Order=0)]
-        public Portafo1.ServiceReference1.ListarUnidadRequestBody Body;
-        
-        public ListarUnidadRequest() {
-        }
-        
-        public ListarUnidadRequest(Portafo1.ServiceReference1.ListarUnidadRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute()]
-    public partial class ListarUnidadRequestBody {
-        
-        public ListarUnidadRequestBody() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class ListarUnidadResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="ListarUnidadResponse", Namespace="http://tempuri.org/", Order=0)]
-        public Portafo1.ServiceReference1.ListarUnidadResponseBody Body;
-        
-        public ListarUnidadResponse() {
-        }
-        
-        public ListarUnidadResponse(Portafo1.ServiceReference1.ListarUnidadResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class ListarUnidadResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public Portafo1.ServiceReference1.UnidadInternaN[] ListarUnidadResult;
-        
-        public ListarUnidadResponseBody() {
-        }
-        
-        public ListarUnidadResponseBody(Portafo1.ServiceReference1.UnidadInternaN[] ListarUnidadResult) {
-            this.ListarUnidadResult = ListarUnidadResult;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class ModificarUnidadRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="ModificarUnidad", Namespace="http://tempuri.org/", Order=0)]
-        public Portafo1.ServiceReference1.ModificarUnidadRequestBody Body;
-        
-        public ModificarUnidadRequest() {
-        }
-        
-        public ModificarUnidadRequest(Portafo1.ServiceReference1.ModificarUnidadRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class ModificarUnidadRequestBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public Portafo1.ServiceReference1.UnidadInternaN nu;
-        
-        public ModificarUnidadRequestBody() {
-        }
-        
-        public ModificarUnidadRequestBody(Portafo1.ServiceReference1.UnidadInternaN nu) {
-            this.nu = nu;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class ModificarUnidadResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="ModificarUnidadResponse", Namespace="http://tempuri.org/", Order=0)]
-        public Portafo1.ServiceReference1.ModificarUnidadResponseBody Body;
-        
-        public ModificarUnidadResponse() {
-        }
-        
-        public ModificarUnidadResponse(Portafo1.ServiceReference1.ModificarUnidadResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class ModificarUnidadResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
-        public int ModificarUnidadResult;
-        
-        public ModificarUnidadResponseBody() {
-        }
-        
-        public ModificarUnidadResponseBody(int ModificarUnidadResult) {
-            this.ModificarUnidadResult = ModificarUnidadResult;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class ListarEmpresaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="ListarEmpresa", Namespace="http://tempuri.org/", Order=0)]
-        public Portafo1.ServiceReference1.ListarEmpresaRequestBody Body;
-        
-        public ListarEmpresaRequest() {
-        }
-        
-        public ListarEmpresaRequest(Portafo1.ServiceReference1.ListarEmpresaRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute()]
-    public partial class ListarEmpresaRequestBody {
-        
-        public ListarEmpresaRequestBody() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class ListarEmpresaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="ListarEmpresaResponse", Namespace="http://tempuri.org/", Order=0)]
-        public Portafo1.ServiceReference1.ListarEmpresaResponseBody Body;
-        
-        public ListarEmpresaResponse() {
-        }
-        
-        public ListarEmpresaResponse(Portafo1.ServiceReference1.ListarEmpresaResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class ListarEmpresaResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public Portafo1.ServiceReference1.EmpresaN[] ListarEmpresaResult;
-        
-        public ListarEmpresaResponseBody() {
-        }
-        
-        public ListarEmpresaResponseBody(Portafo1.ServiceReference1.EmpresaN[] ListarEmpresaResult) {
-            this.ListarEmpresaResult = ListarEmpresaResult;
         }
     }
     
@@ -5256,6 +4631,56 @@ namespace Portafo1.ServiceReference1 {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Portafo1.ServiceReference1.ContarejecucionesAceptadasResponse Portafo1.ServiceReference1.WebService1Soap.ContarejecucionesAceptadas(Portafo1.ServiceReference1.ContarejecucionesAceptadasRequest request) {
+            return base.Channel.ContarejecucionesAceptadas(request);
+        }
+        
+        public Portafo1.ServiceReference1.IdTarea[] ContarejecucionesAceptadas(string rut) {
+            Portafo1.ServiceReference1.ContarejecucionesAceptadasRequest inValue = new Portafo1.ServiceReference1.ContarejecucionesAceptadasRequest();
+            inValue.Body = new Portafo1.ServiceReference1.ContarejecucionesAceptadasRequestBody();
+            inValue.Body.rut = rut;
+            Portafo1.ServiceReference1.ContarejecucionesAceptadasResponse retVal = ((Portafo1.ServiceReference1.WebService1Soap)(this)).ContarejecucionesAceptadas(inValue);
+            return retVal.Body.ContarejecucionesAceptadasResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Portafo1.ServiceReference1.ContarejecucionesAceptadasResponse> Portafo1.ServiceReference1.WebService1Soap.ContarejecucionesAceptadasAsync(Portafo1.ServiceReference1.ContarejecucionesAceptadasRequest request) {
+            return base.Channel.ContarejecucionesAceptadasAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Portafo1.ServiceReference1.ContarejecucionesAceptadasResponse> ContarejecucionesAceptadasAsync(string rut) {
+            Portafo1.ServiceReference1.ContarejecucionesAceptadasRequest inValue = new Portafo1.ServiceReference1.ContarejecucionesAceptadasRequest();
+            inValue.Body = new Portafo1.ServiceReference1.ContarejecucionesAceptadasRequestBody();
+            inValue.Body.rut = rut;
+            return ((Portafo1.ServiceReference1.WebService1Soap)(this)).ContarejecucionesAceptadasAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Portafo1.ServiceReference1.ContarejecucionesporconfirmarResponse Portafo1.ServiceReference1.WebService1Soap.Contarejecucionesporconfirmar(Portafo1.ServiceReference1.ContarejecucionesporconfirmarRequest request) {
+            return base.Channel.Contarejecucionesporconfirmar(request);
+        }
+        
+        public Portafo1.ServiceReference1.IdTarea[] Contarejecucionesporconfirmar(string rut) {
+            Portafo1.ServiceReference1.ContarejecucionesporconfirmarRequest inValue = new Portafo1.ServiceReference1.ContarejecucionesporconfirmarRequest();
+            inValue.Body = new Portafo1.ServiceReference1.ContarejecucionesporconfirmarRequestBody();
+            inValue.Body.rut = rut;
+            Portafo1.ServiceReference1.ContarejecucionesporconfirmarResponse retVal = ((Portafo1.ServiceReference1.WebService1Soap)(this)).Contarejecucionesporconfirmar(inValue);
+            return retVal.Body.ContarejecucionesporconfirmarResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Portafo1.ServiceReference1.ContarejecucionesporconfirmarResponse> Portafo1.ServiceReference1.WebService1Soap.ContarejecucionesporconfirmarAsync(Portafo1.ServiceReference1.ContarejecucionesporconfirmarRequest request) {
+            return base.Channel.ContarejecucionesporconfirmarAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Portafo1.ServiceReference1.ContarejecucionesporconfirmarResponse> ContarejecucionesporconfirmarAsync(string rut) {
+            Portafo1.ServiceReference1.ContarejecucionesporconfirmarRequest inValue = new Portafo1.ServiceReference1.ContarejecucionesporconfirmarRequest();
+            inValue.Body = new Portafo1.ServiceReference1.ContarejecucionesporconfirmarRequestBody();
+            inValue.Body.rut = rut;
+            return ((Portafo1.ServiceReference1.WebService1Soap)(this)).ContarejecucionesporconfirmarAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         Portafo1.ServiceReference1.ContarProcesosResponse Portafo1.ServiceReference1.WebService1Soap.ContarProcesos(Portafo1.ServiceReference1.ContarProcesosRequest request) {
             return base.Channel.ContarProcesos(request);
         }
@@ -5430,191 +4855,6 @@ namespace Portafo1.ServiceReference1 {
             Portafo1.ServiceReference1.ContarEstadosTarRequest inValue = new Portafo1.ServiceReference1.ContarEstadosTarRequest();
             inValue.Body = new Portafo1.ServiceReference1.ContarEstadosTarRequestBody();
             return ((Portafo1.ServiceReference1.WebService1Soap)(this)).ContarEstadosTarAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Portafo1.ServiceReference1.AgregarRolResponse Portafo1.ServiceReference1.WebService1Soap.AgregarRol(Portafo1.ServiceReference1.AgregarRolRequest request) {
-            return base.Channel.AgregarRol(request);
-        }
-        
-        public int AgregarRol(Portafo1.ServiceReference1.RolN nu) {
-            Portafo1.ServiceReference1.AgregarRolRequest inValue = new Portafo1.ServiceReference1.AgregarRolRequest();
-            inValue.Body = new Portafo1.ServiceReference1.AgregarRolRequestBody();
-            inValue.Body.nu = nu;
-            Portafo1.ServiceReference1.AgregarRolResponse retVal = ((Portafo1.ServiceReference1.WebService1Soap)(this)).AgregarRol(inValue);
-            return retVal.Body.AgregarRolResult;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Portafo1.ServiceReference1.AgregarRolResponse> Portafo1.ServiceReference1.WebService1Soap.AgregarRolAsync(Portafo1.ServiceReference1.AgregarRolRequest request) {
-            return base.Channel.AgregarRolAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Portafo1.ServiceReference1.AgregarRolResponse> AgregarRolAsync(Portafo1.ServiceReference1.RolN nu) {
-            Portafo1.ServiceReference1.AgregarRolRequest inValue = new Portafo1.ServiceReference1.AgregarRolRequest();
-            inValue.Body = new Portafo1.ServiceReference1.AgregarRolRequestBody();
-            inValue.Body.nu = nu;
-            return ((Portafo1.ServiceReference1.WebService1Soap)(this)).AgregarRolAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Portafo1.ServiceReference1.ListarRolResponse Portafo1.ServiceReference1.WebService1Soap.ListarRol(Portafo1.ServiceReference1.ListarRolRequest request) {
-            return base.Channel.ListarRol(request);
-        }
-        
-        public Portafo1.ServiceReference1.RolN[] ListarRol() {
-            Portafo1.ServiceReference1.ListarRolRequest inValue = new Portafo1.ServiceReference1.ListarRolRequest();
-            inValue.Body = new Portafo1.ServiceReference1.ListarRolRequestBody();
-            Portafo1.ServiceReference1.ListarRolResponse retVal = ((Portafo1.ServiceReference1.WebService1Soap)(this)).ListarRol(inValue);
-            return retVal.Body.ListarRolResult;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Portafo1.ServiceReference1.ListarRolResponse> Portafo1.ServiceReference1.WebService1Soap.ListarRolAsync(Portafo1.ServiceReference1.ListarRolRequest request) {
-            return base.Channel.ListarRolAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Portafo1.ServiceReference1.ListarRolResponse> ListarRolAsync() {
-            Portafo1.ServiceReference1.ListarRolRequest inValue = new Portafo1.ServiceReference1.ListarRolRequest();
-            inValue.Body = new Portafo1.ServiceReference1.ListarRolRequestBody();
-            return ((Portafo1.ServiceReference1.WebService1Soap)(this)).ListarRolAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Portafo1.ServiceReference1.ModificarRolResponse Portafo1.ServiceReference1.WebService1Soap.ModificarRol(Portafo1.ServiceReference1.ModificarRolRequest request) {
-            return base.Channel.ModificarRol(request);
-        }
-        
-        public int ModificarRol(Portafo1.ServiceReference1.RolN nu) {
-            Portafo1.ServiceReference1.ModificarRolRequest inValue = new Portafo1.ServiceReference1.ModificarRolRequest();
-            inValue.Body = new Portafo1.ServiceReference1.ModificarRolRequestBody();
-            inValue.Body.nu = nu;
-            Portafo1.ServiceReference1.ModificarRolResponse retVal = ((Portafo1.ServiceReference1.WebService1Soap)(this)).ModificarRol(inValue);
-            return retVal.Body.ModificarRolResult;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Portafo1.ServiceReference1.ModificarRolResponse> Portafo1.ServiceReference1.WebService1Soap.ModificarRolAsync(Portafo1.ServiceReference1.ModificarRolRequest request) {
-            return base.Channel.ModificarRolAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Portafo1.ServiceReference1.ModificarRolResponse> ModificarRolAsync(Portafo1.ServiceReference1.RolN nu) {
-            Portafo1.ServiceReference1.ModificarRolRequest inValue = new Portafo1.ServiceReference1.ModificarRolRequest();
-            inValue.Body = new Portafo1.ServiceReference1.ModificarRolRequestBody();
-            inValue.Body.nu = nu;
-            return ((Portafo1.ServiceReference1.WebService1Soap)(this)).ModificarRolAsync(inValue);
-        }
-        
-        public int EliminarRol(int id) {
-            return base.Channel.EliminarRol(id);
-        }
-        
-        public System.Threading.Tasks.Task<int> EliminarRolAsync(int id) {
-            return base.Channel.EliminarRolAsync(id);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Portafo1.ServiceReference1.AgregarUnidadResponse Portafo1.ServiceReference1.WebService1Soap.AgregarUnidad(Portafo1.ServiceReference1.AgregarUnidadRequest request) {
-            return base.Channel.AgregarUnidad(request);
-        }
-        
-        public int AgregarUnidad(Portafo1.ServiceReference1.UnidadInternaN nu) {
-            Portafo1.ServiceReference1.AgregarUnidadRequest inValue = new Portafo1.ServiceReference1.AgregarUnidadRequest();
-            inValue.Body = new Portafo1.ServiceReference1.AgregarUnidadRequestBody();
-            inValue.Body.nu = nu;
-            Portafo1.ServiceReference1.AgregarUnidadResponse retVal = ((Portafo1.ServiceReference1.WebService1Soap)(this)).AgregarUnidad(inValue);
-            return retVal.Body.AgregarUnidadResult;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Portafo1.ServiceReference1.AgregarUnidadResponse> Portafo1.ServiceReference1.WebService1Soap.AgregarUnidadAsync(Portafo1.ServiceReference1.AgregarUnidadRequest request) {
-            return base.Channel.AgregarUnidadAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Portafo1.ServiceReference1.AgregarUnidadResponse> AgregarUnidadAsync(Portafo1.ServiceReference1.UnidadInternaN nu) {
-            Portafo1.ServiceReference1.AgregarUnidadRequest inValue = new Portafo1.ServiceReference1.AgregarUnidadRequest();
-            inValue.Body = new Portafo1.ServiceReference1.AgregarUnidadRequestBody();
-            inValue.Body.nu = nu;
-            return ((Portafo1.ServiceReference1.WebService1Soap)(this)).AgregarUnidadAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Portafo1.ServiceReference1.ListarUnidadResponse Portafo1.ServiceReference1.WebService1Soap.ListarUnidad(Portafo1.ServiceReference1.ListarUnidadRequest request) {
-            return base.Channel.ListarUnidad(request);
-        }
-        
-        public Portafo1.ServiceReference1.UnidadInternaN[] ListarUnidad() {
-            Portafo1.ServiceReference1.ListarUnidadRequest inValue = new Portafo1.ServiceReference1.ListarUnidadRequest();
-            inValue.Body = new Portafo1.ServiceReference1.ListarUnidadRequestBody();
-            Portafo1.ServiceReference1.ListarUnidadResponse retVal = ((Portafo1.ServiceReference1.WebService1Soap)(this)).ListarUnidad(inValue);
-            return retVal.Body.ListarUnidadResult;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Portafo1.ServiceReference1.ListarUnidadResponse> Portafo1.ServiceReference1.WebService1Soap.ListarUnidadAsync(Portafo1.ServiceReference1.ListarUnidadRequest request) {
-            return base.Channel.ListarUnidadAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Portafo1.ServiceReference1.ListarUnidadResponse> ListarUnidadAsync() {
-            Portafo1.ServiceReference1.ListarUnidadRequest inValue = new Portafo1.ServiceReference1.ListarUnidadRequest();
-            inValue.Body = new Portafo1.ServiceReference1.ListarUnidadRequestBody();
-            return ((Portafo1.ServiceReference1.WebService1Soap)(this)).ListarUnidadAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Portafo1.ServiceReference1.ModificarUnidadResponse Portafo1.ServiceReference1.WebService1Soap.ModificarUnidad(Portafo1.ServiceReference1.ModificarUnidadRequest request) {
-            return base.Channel.ModificarUnidad(request);
-        }
-        
-        public int ModificarUnidad(Portafo1.ServiceReference1.UnidadInternaN nu) {
-            Portafo1.ServiceReference1.ModificarUnidadRequest inValue = new Portafo1.ServiceReference1.ModificarUnidadRequest();
-            inValue.Body = new Portafo1.ServiceReference1.ModificarUnidadRequestBody();
-            inValue.Body.nu = nu;
-            Portafo1.ServiceReference1.ModificarUnidadResponse retVal = ((Portafo1.ServiceReference1.WebService1Soap)(this)).ModificarUnidad(inValue);
-            return retVal.Body.ModificarUnidadResult;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Portafo1.ServiceReference1.ModificarUnidadResponse> Portafo1.ServiceReference1.WebService1Soap.ModificarUnidadAsync(Portafo1.ServiceReference1.ModificarUnidadRequest request) {
-            return base.Channel.ModificarUnidadAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Portafo1.ServiceReference1.ModificarUnidadResponse> ModificarUnidadAsync(Portafo1.ServiceReference1.UnidadInternaN nu) {
-            Portafo1.ServiceReference1.ModificarUnidadRequest inValue = new Portafo1.ServiceReference1.ModificarUnidadRequest();
-            inValue.Body = new Portafo1.ServiceReference1.ModificarUnidadRequestBody();
-            inValue.Body.nu = nu;
-            return ((Portafo1.ServiceReference1.WebService1Soap)(this)).ModificarUnidadAsync(inValue);
-        }
-        
-        public int EliminarUnidad(int id) {
-            return base.Channel.EliminarUnidad(id);
-        }
-        
-        public System.Threading.Tasks.Task<int> EliminarUnidadAsync(int id) {
-            return base.Channel.EliminarUnidadAsync(id);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Portafo1.ServiceReference1.ListarEmpresaResponse Portafo1.ServiceReference1.WebService1Soap.ListarEmpresa(Portafo1.ServiceReference1.ListarEmpresaRequest request) {
-            return base.Channel.ListarEmpresa(request);
-        }
-        
-        public Portafo1.ServiceReference1.EmpresaN[] ListarEmpresa() {
-            Portafo1.ServiceReference1.ListarEmpresaRequest inValue = new Portafo1.ServiceReference1.ListarEmpresaRequest();
-            inValue.Body = new Portafo1.ServiceReference1.ListarEmpresaRequestBody();
-            Portafo1.ServiceReference1.ListarEmpresaResponse retVal = ((Portafo1.ServiceReference1.WebService1Soap)(this)).ListarEmpresa(inValue);
-            return retVal.Body.ListarEmpresaResult;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Portafo1.ServiceReference1.ListarEmpresaResponse> Portafo1.ServiceReference1.WebService1Soap.ListarEmpresaAsync(Portafo1.ServiceReference1.ListarEmpresaRequest request) {
-            return base.Channel.ListarEmpresaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Portafo1.ServiceReference1.ListarEmpresaResponse> ListarEmpresaAsync() {
-            Portafo1.ServiceReference1.ListarEmpresaRequest inValue = new Portafo1.ServiceReference1.ListarEmpresaRequest();
-            inValue.Body = new Portafo1.ServiceReference1.ListarEmpresaRequestBody();
-            return ((Portafo1.ServiceReference1.WebService1Soap)(this)).ListarEmpresaAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]

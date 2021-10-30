@@ -155,7 +155,7 @@ namespace Portafo1.Negocio
             return or;
 
         }
-        public int contarEjecuciones()
+        public int contarEjecucioness()
         {
             ServiceReference1.WebService1SoapClient wcf = new ServiceReference1.WebService1SoapClient();
             List<IdTareasBLL> lista = new List<IdTareasBLL>();
@@ -179,6 +179,41 @@ namespace Portafo1.Negocio
 
             int or = 0;
             foreach (var item in wcf.ContarEstadosTar())
+            {
+
+                IdTareasBLL otro = new IdTareasBLL();
+                or = item.idtarea;
+                lista.Add(otro);
+
+            }
+            return or;
+
+        }
+
+        public int contarCargadeTrabajo(string rut)
+        {
+            ServiceReference1.WebService1SoapClient wcf = new ServiceReference1.WebService1SoapClient();
+            List<IdTareasBLL> lista = new List<IdTareasBLL>();
+
+            int or = 0;
+            foreach (var item in wcf.ContarejecucionesAceptadas(rut))
+            {
+
+                IdTareasBLL otro = new IdTareasBLL();
+                or = item.idtarea;
+                lista.Add(otro);
+
+            }
+            return or;
+
+        }
+        public int contarCargadeTrabajoasignadas(string rut)
+        {
+            ServiceReference1.WebService1SoapClient wcf = new ServiceReference1.WebService1SoapClient();
+            List<IdTareasBLL> lista = new List<IdTareasBLL>();
+
+            int or = 0;
+            foreach (var item in wcf.Contarejecucionesporconfirmar(rut))
             {
 
                 IdTareasBLL otro = new IdTareasBLL();
