@@ -160,6 +160,67 @@ namespace Portafo1.Negocio
 
         }
 
+        public int tareasAtrasadas(string rut)
+        {
+            ServiceReference1.WebService1SoapClient wcf = new ServiceReference1.WebService1SoapClient();
+            List<EjecucionBLL> lista = new List<EjecucionBLL>();
+
+            string tipo = "";
+
+            int atra = 0;
+
+            foreach (var item in wcf.ListarEjecucionesAceptadas(rut))
+            {
+                EjecucionBLL otro = new EjecucionBLL();
+                otro.idEjecu = item.idEjec;
+                otro.descripcionEje = item.descrip;
+                otro.fechaInicio = item.fechaInicio;
+                otro.fechaTermino = item.fechaTermino;
+                otro.FechaEjec = item.fechaEjecucion;
+                DateTime ini = DateTime.Today;
+                DateTime fin = item.fechaTermino;
+
+                TimeSpan difFechas = fin - ini;
+                int sed = difFechas.Days;
+
+                if (sed < 0)
+                {
+                    atra = atra + 1;
+                }
+                if (sed >= 7)
+                {
+                    otro.color = "green";
+                }
+                if (sed < 7 && sed > 3)
+                {
+                    otro.color = "yellow";
+                }
+                if (sed <= 3)
+                {
+                    otro.color = "red";
+                }
+                otro.semaforo = "" + sed;
+                otro.notficacion = item.notifi;
+                if (item.tipota == 1)
+                {
+                    tipo = "Normal";
+                }
+                else
+                {
+                    tipo = "Tarea de flujo";
+                }
+                otro.tipotarea = tipo;
+                otro.nombreTarea = item.nombreta;
+                otro.descripcionTarea = item.descripcionTar;
+                otro.observacionTarea = item.observacionTar;
+                otro.adjudicador = item.rutAdjudicador;
+                lista.Add(otro);
+
+            }
+            return atra;
+
+        }
+
         public string listaEjecucionesAceptadas2(string rut)
         {
             ServiceReference1.WebService1SoapClient wcf = new ServiceReference1.WebService1SoapClient();

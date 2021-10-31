@@ -71,7 +71,7 @@
         </div>
         <div class="login-box">
             <div class="login-box-body">
-                <h4 style="text-align: center;">Ingrese sus datos</h4>
+                <h2 style="text-align: center;">Ingrese sus datos</h2>
                 <br />
 
                 <form id="form2" runat="server">
@@ -80,8 +80,7 @@
                     <div class="col-md-6 text-center mb-5">
                     </div>
                     <br />
-                    <br />
-                    <br />
+
                     <asp:Label ID="Label5" runat="server" Text="Usuario:"></asp:Label>
                     <asp:TextBox ID="TextBox1" CssClass="form-control" runat="server" placeholder="Rut"></asp:TextBox>
                     <br />

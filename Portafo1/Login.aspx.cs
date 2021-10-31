@@ -6,6 +6,8 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using Portafo1.Negocio;
 using Oracle.DataAccess.Client;
+using System.Net.Mail;
+using System.Net;
 
 namespace Portafo1
 {
@@ -45,6 +47,47 @@ namespace Portafo1
             {
                 if (lector["ROL_IDROL"].ToString()=="1")
                 {
+
+                    EjecucionBLL ejecu = new EjecucionBLL();
+
+                    int atra = ejecu.tareasAtrasadas(TextBox1.Text);
+
+                    if (atra > 0)
+                    {
+                        NombreProcesoBLL corree = new NombreProcesoBLL();
+                        string cor = corree.buscarCorreo(TextBox1.Text);
+
+                        SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
+                        smtp.UseDefaultCredentials = false;
+                        smtp.Credentials = new NetworkCredential("controldetareas2021duoc@gmail.com", "controldetareas2021");
+                        smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
+                        smtp.EnableSsl = true;
+
+
+                        string body = "<body>" +
+                                " Tiene tareas atrasadas" +
+
+                                "Todos los detalles en www.processSA.com" +
+
+                                "" +
+
+                                "Buenas gestiones - Process S.A." +
+
+                                "";
+
+
+                        MailMessage mail = new MailMessage();
+                        mail.From = new MailAddress("controldetareas2021duoc@gmail.com", "Process S.A. - Tarea atrasada");
+                        mail.To.Add(new MailAddress(cor));
+                        mail.Subject = "Tiene tareas atrasadas";
+                        mail.Body = body;
+                        mail.IsBodyHtml = true;
+
+                        smtp.Send(mail);
+
+                    }
+
+
                     Session["funcionario"] = 1;
                     
                     System.Diagnostics.Debug.WriteLine(Session["funcionario"]);
@@ -55,9 +98,53 @@ namespace Portafo1
                     System.Diagnostics.Debug.WriteLine("SomeText");
                     Console.WriteLine("hola.");
                     Application["rut"] = "9";
+
                 }
                 if(lector["ROL_IDROL"].ToString() == "3")
                 {
+
+
+                    EjecucionBLL ejecu = new EjecucionBLL();
+
+                    int atra = ejecu.tareasAtrasadas(TextBox1.Text);
+
+                    if (atra > 0)
+                    {
+                        NombreProcesoBLL corree = new NombreProcesoBLL();
+                        string cor = corree.buscarCorreo(TextBox1.Text);
+
+                        SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
+                        smtp.UseDefaultCredentials = false;
+                        smtp.Credentials = new NetworkCredential("controldetareas2021duoc@gmail.com", "controldetareas2021");
+                        smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
+                        smtp.EnableSsl = true;
+
+
+                        string body = "<body>" +
+                                " Tiene tareas atrasadas" +
+
+                                "Todos los detalles en www.processSA.com" +
+
+                                "" +
+
+                                "Buenas gestiones - Process S.A." +
+
+                                "";
+
+
+                        MailMessage mail = new MailMessage();
+                        mail.From = new MailAddress("controldetareas2021duoc@gmail.com", "Process S.A. - Tarea atrasada");
+                        mail.To.Add(new MailAddress(cor));
+                        mail.Subject = "Tiene tareas atrasadas";
+                        mail.Body = body;
+                        mail.IsBodyHtml = true;
+
+                        smtp.Send(mail);
+
+                    }
+
+
+
                     Session["funcionario"] = 3;
                     Server.Transfer("TareasAsignadasJefe.aspx");
                     conexion.Close();
