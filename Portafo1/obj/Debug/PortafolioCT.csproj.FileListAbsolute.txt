@@ -61,3 +61,4 @@ C:\Users\sebas\Desktop\funcional 20\seba\SebaF27\PortafolioCT\Portafo1-Sebasti-n
 C:\Users\sebas\Desktop\funcional 20\seba\SebaF27\PortafolioCT\Portafo1-Sebasti-nTorres\Portafo1\obj\Debug\PortafolioCT.csproj.CopyComplete
 C:\Users\sebas\Desktop\funcional 20\seba\SebaF27\PortafolioCT\Portafo1-Sebasti-nTorres\Portafo1\obj\Debug\Portafo1.dll
 C:\Users\sebas\Desktop\funcional 20\seba\SebaF27\PortafolioCT\Portafo1-Sebasti-nTorres\Portafo1\obj\Debug\Portafo1.pdb
+C:\Users\sebas\Desktop\funcional 20\seba\SebaF27\PortafolioCT\Portafo1-Sebasti-nTorres\Portafo1\obj\Debug\PortafolioCT.csprojAssemblyReference.cache

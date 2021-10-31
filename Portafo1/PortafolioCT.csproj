@@ -100,6 +100,9 @@
     <Content Include="Connected Services\ServiceReference1\Portafo1.ServiceReference1.AgregarTarResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\ServiceReference1\Portafo1.ServiceReference1.BuscarCorreoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <Content Include="Connected Services\ServiceReference1\Portafo1.ServiceReference1.BuscarIdProceResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -164,6 +167,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\ServiceReference1\Portafo1.ServiceReference1.ListarEjecucionesPorConfirmarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceReference1\Portafo1.ServiceReference1.ListarEjecucionesRechazadasResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\ServiceReference1\Portafo1.ServiceReference1.ListarEjecucionesRevisadasResponse.datasource">
@@ -238,6 +244,7 @@
     <Content Include="CrearProceso.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Gruntfile.js" />
+    <Content Include="imgs\logo.jpg" />
     <Content Include="index.html" />
     <Content Include="index2.html" />
     <Content Include="js\bootstrap.js" />

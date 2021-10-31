@@ -1125,6 +1125,13 @@ namespace Portafo1.ServiceReference1 {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ListarEjecucionesTerminadas", ReplyAction="*")]
         System.Threading.Tasks.Task<Portafo1.ServiceReference1.ListarEjecucionesTerminadasResponse> ListarEjecucionesTerminadasAsync(Portafo1.ServiceReference1.ListarEjecucionesTerminadasRequest request);
         
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento ListarEjecucionesRechazadasResult del espacio de nombres http://tempuri.org/ no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ListarEjecucionesRechazadas", ReplyAction="*")]
+        Portafo1.ServiceReference1.ListarEjecucionesRechazadasResponse ListarEjecucionesRechazadas(Portafo1.ServiceReference1.ListarEjecucionesRechazadasRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ListarEjecucionesRechazadas", ReplyAction="*")]
+        System.Threading.Tasks.Task<Portafo1.ServiceReference1.ListarEjecucionesRechazadasResponse> ListarEjecucionesRechazadasAsync(Portafo1.ServiceReference1.ListarEjecucionesRechazadasRequest request);
+        
         // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento rut del espacio de nombres http://tempuri.org/ no está marcado para aceptar valores nil.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ListarEjecucionesRevisadas", ReplyAction="*")]
         Portafo1.ServiceReference1.ListarEjecucionesRevisadasResponse ListarEjecucionesRevisadas(Portafo1.ServiceReference1.ListarEjecucionesRevisadasRequest request);
@@ -1166,6 +1173,13 @@ namespace Portafo1.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/BuscarNombresProcesos", ReplyAction="*")]
         System.Threading.Tasks.Task<Portafo1.ServiceReference1.BuscarNombresProcesosResponse> BuscarNombresProcesosAsync(Portafo1.ServiceReference1.BuscarNombresProcesosRequest request);
+        
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento rut del espacio de nombres http://tempuri.org/ no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/BuscarCorreo", ReplyAction="*")]
+        Portafo1.ServiceReference1.BuscarCorreoResponse BuscarCorreo(Portafo1.ServiceReference1.BuscarCorreoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/BuscarCorreo", ReplyAction="*")]
+        System.Threading.Tasks.Task<Portafo1.ServiceReference1.BuscarCorreoResponse> BuscarCorreoAsync(Portafo1.ServiceReference1.BuscarCorreoRequest request);
         
         // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento rut del espacio de nombres http://tempuri.org/ no está marcado para aceptar valores nil.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/BuscarIdTareas", ReplyAction="*")]
@@ -2477,6 +2491,67 @@ namespace Portafo1.ServiceReference1 {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class ListarEjecucionesRechazadasRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="ListarEjecucionesRechazadas", Namespace="http://tempuri.org/", Order=0)]
+        public Portafo1.ServiceReference1.ListarEjecucionesRechazadasRequestBody Body;
+        
+        public ListarEjecucionesRechazadasRequest() {
+        }
+        
+        public ListarEjecucionesRechazadasRequest(Portafo1.ServiceReference1.ListarEjecucionesRechazadasRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class ListarEjecucionesRechazadasRequestBody {
+        
+        public ListarEjecucionesRechazadasRequestBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class ListarEjecucionesRechazadasResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="ListarEjecucionesRechazadasResponse", Namespace="http://tempuri.org/", Order=0)]
+        public Portafo1.ServiceReference1.ListarEjecucionesRechazadasResponseBody Body;
+        
+        public ListarEjecucionesRechazadasResponse() {
+        }
+        
+        public ListarEjecucionesRechazadasResponse(Portafo1.ServiceReference1.ListarEjecucionesRechazadasResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class ListarEjecucionesRechazadasResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public Portafo1.ServiceReference1.EjecucionN[] ListarEjecucionesRechazadasResult;
+        
+        public ListarEjecucionesRechazadasResponseBody() {
+        }
+        
+        public ListarEjecucionesRechazadasResponseBody(Portafo1.ServiceReference1.EjecucionN[] ListarEjecucionesRechazadasResult) {
+            this.ListarEjecucionesRechazadasResult = ListarEjecucionesRechazadasResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class ListarEjecucionesRevisadasRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="ListarEjecucionesRevisadas", Namespace="http://tempuri.org/", Order=0)]
@@ -2875,6 +2950,74 @@ namespace Portafo1.ServiceReference1 {
         
         public BuscarNombresProcesosResponseBody(Portafo1.ServiceReference1.NombreProceN[] BuscarNombresProcesosResult) {
             this.BuscarNombresProcesosResult = BuscarNombresProcesosResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class BuscarCorreoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="BuscarCorreo", Namespace="http://tempuri.org/", Order=0)]
+        public Portafo1.ServiceReference1.BuscarCorreoRequestBody Body;
+        
+        public BuscarCorreoRequest() {
+        }
+        
+        public BuscarCorreoRequest(Portafo1.ServiceReference1.BuscarCorreoRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class BuscarCorreoRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string rut;
+        
+        public BuscarCorreoRequestBody() {
+        }
+        
+        public BuscarCorreoRequestBody(string rut) {
+            this.rut = rut;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class BuscarCorreoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="BuscarCorreoResponse", Namespace="http://tempuri.org/", Order=0)]
+        public Portafo1.ServiceReference1.BuscarCorreoResponseBody Body;
+        
+        public BuscarCorreoResponse() {
+        }
+        
+        public BuscarCorreoResponse(Portafo1.ServiceReference1.BuscarCorreoResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class BuscarCorreoResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public Portafo1.ServiceReference1.NombreProceN[] BuscarCorreoResult;
+        
+        public BuscarCorreoResponseBody() {
+        }
+        
+        public BuscarCorreoResponseBody(Portafo1.ServiceReference1.NombreProceN[] BuscarCorreoResult) {
+            this.BuscarCorreoResult = BuscarCorreoResult;
         }
     }
     
@@ -4408,6 +4551,29 @@ namespace Portafo1.ServiceReference1 {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Portafo1.ServiceReference1.ListarEjecucionesRechazadasResponse Portafo1.ServiceReference1.WebService1Soap.ListarEjecucionesRechazadas(Portafo1.ServiceReference1.ListarEjecucionesRechazadasRequest request) {
+            return base.Channel.ListarEjecucionesRechazadas(request);
+        }
+        
+        public Portafo1.ServiceReference1.EjecucionN[] ListarEjecucionesRechazadas() {
+            Portafo1.ServiceReference1.ListarEjecucionesRechazadasRequest inValue = new Portafo1.ServiceReference1.ListarEjecucionesRechazadasRequest();
+            inValue.Body = new Portafo1.ServiceReference1.ListarEjecucionesRechazadasRequestBody();
+            Portafo1.ServiceReference1.ListarEjecucionesRechazadasResponse retVal = ((Portafo1.ServiceReference1.WebService1Soap)(this)).ListarEjecucionesRechazadas(inValue);
+            return retVal.Body.ListarEjecucionesRechazadasResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Portafo1.ServiceReference1.ListarEjecucionesRechazadasResponse> Portafo1.ServiceReference1.WebService1Soap.ListarEjecucionesRechazadasAsync(Portafo1.ServiceReference1.ListarEjecucionesRechazadasRequest request) {
+            return base.Channel.ListarEjecucionesRechazadasAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Portafo1.ServiceReference1.ListarEjecucionesRechazadasResponse> ListarEjecucionesRechazadasAsync() {
+            Portafo1.ServiceReference1.ListarEjecucionesRechazadasRequest inValue = new Portafo1.ServiceReference1.ListarEjecucionesRechazadasRequest();
+            inValue.Body = new Portafo1.ServiceReference1.ListarEjecucionesRechazadasRequestBody();
+            return ((Portafo1.ServiceReference1.WebService1Soap)(this)).ListarEjecucionesRechazadasAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         Portafo1.ServiceReference1.ListarEjecucionesRevisadasResponse Portafo1.ServiceReference1.WebService1Soap.ListarEjecucionesRevisadas(Portafo1.ServiceReference1.ListarEjecucionesRevisadasRequest request) {
             return base.Channel.ListarEjecucionesRevisadas(request);
         }
@@ -4555,6 +4721,31 @@ namespace Portafo1.ServiceReference1 {
             Portafo1.ServiceReference1.BuscarNombresProcesosRequest inValue = new Portafo1.ServiceReference1.BuscarNombresProcesosRequest();
             inValue.Body = new Portafo1.ServiceReference1.BuscarNombresProcesosRequestBody();
             return ((Portafo1.ServiceReference1.WebService1Soap)(this)).BuscarNombresProcesosAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Portafo1.ServiceReference1.BuscarCorreoResponse Portafo1.ServiceReference1.WebService1Soap.BuscarCorreo(Portafo1.ServiceReference1.BuscarCorreoRequest request) {
+            return base.Channel.BuscarCorreo(request);
+        }
+        
+        public Portafo1.ServiceReference1.NombreProceN[] BuscarCorreo(string rut) {
+            Portafo1.ServiceReference1.BuscarCorreoRequest inValue = new Portafo1.ServiceReference1.BuscarCorreoRequest();
+            inValue.Body = new Portafo1.ServiceReference1.BuscarCorreoRequestBody();
+            inValue.Body.rut = rut;
+            Portafo1.ServiceReference1.BuscarCorreoResponse retVal = ((Portafo1.ServiceReference1.WebService1Soap)(this)).BuscarCorreo(inValue);
+            return retVal.Body.BuscarCorreoResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Portafo1.ServiceReference1.BuscarCorreoResponse> Portafo1.ServiceReference1.WebService1Soap.BuscarCorreoAsync(Portafo1.ServiceReference1.BuscarCorreoRequest request) {
+            return base.Channel.BuscarCorreoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Portafo1.ServiceReference1.BuscarCorreoResponse> BuscarCorreoAsync(string rut) {
+            Portafo1.ServiceReference1.BuscarCorreoRequest inValue = new Portafo1.ServiceReference1.BuscarCorreoRequest();
+            inValue.Body = new Portafo1.ServiceReference1.BuscarCorreoRequestBody();
+            inValue.Body.rut = rut;
+            return ((Portafo1.ServiceReference1.WebService1Soap)(this)).BuscarCorreoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]

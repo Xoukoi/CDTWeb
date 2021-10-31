@@ -61,6 +61,22 @@ namespace Portafo1.Negocio
             return nombre;
 
         }
+        public string buscarCorreo(string rut)
+        {
+            ServiceReference1.WebService1SoapClient wcf = new ServiceReference1.WebService1SoapClient();
+            string nombre = "x";
+
+            foreach (var item in wcf.BuscarCorreo(rut))
+            {
+
+
+                nombre = item.Nombre;
+
+
+            }
+            return nombre;
+
+        }
         public string apellidoDeLogeado(string rut)
         {
             ServiceReference1.WebService1SoapClient wcf = new ServiceReference1.WebService1SoapClient();

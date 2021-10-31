@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Portafo1.Negocio;
+using System.Net.Mail;
+using System.Net;
 
 namespace Portafo1
 {
@@ -344,8 +346,40 @@ namespace Portafo1
                             lblexito.Text = "Tarea asignada correctamente";
                             lblexito.Visible = true;
                             ween = 1;
+
+                            NombreProcesoBLL corree = new NombreProcesoBLL();
+                            string cor = corree.buscarCorreo(DropDownList7.SelectedValue);
+
+                            SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
+                            smtp.UseDefaultCredentials = false;
+                            smtp.Credentials = new NetworkCredential("controldetareas2021duoc@gmail.com", "controldetareas2021");
+                            smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
+                            smtp.EnableSsl = true;
+                            
+
+                            string body = "<body>" +
+        " Se le ha asignado una nueva tarea" +
+
+           "< span > Todos los detalles en processSA.com </ span >" +
+
+              "< br />" +
+
+              "< span > Buenas gestiones - Process S.A.</ span >" +
+
+            " </ body > ";
+
+
+                            MailMessage mail = new MailMessage();
+                            mail.From = new MailAddress("controldetareas2021duoc@gmail.com", "Process S.A. - Nueva tarea asignada");
+                            mail.To.Add(new MailAddress(cor));
+                            mail.Subject = "Se le ha asignado una nueva tarea";
+                            mail.Body = body;
+                            mail.IsBodyHtml = true;
+
+                            smtp.Send(mail);
+
                             Buttonasignar_ModalPopupExtender.Show();
-                    }
+                        }
 
                 }
                     else

@@ -17,8 +17,8 @@ namespace Portafo1
                 EjecucionBLL nuev = new EjecucionBLL();
                 GridView1.DataSource = nuev.listaEjecucionesTerminadas(Session["rut"].ToString());
                 GridView1.DataBind();
-                GridView2.DataSource = nuev.listaEjecucionesRevisadas(Session["rut"].ToString());
-                GridView2.DataBind();
+                GridView3.DataSource = nuev.listaEjecucionesRechazadas();
+                GridView3.DataBind();
             }
 
         }
@@ -66,6 +66,24 @@ namespace Portafo1
             GridView1.DataSource = nuevo.listaEjecucionesTerminadas(Session["rut"].ToString());
             GridView1.DataBind();
 
+        }
+
+        protected void GridView3_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            EjecucionBLL eje = new EjecucionBLL();
+            GridView3.PageIndex = e.NewPageIndex;
+            GridView3.DataSource = eje.listaEjecucionesRechazadas();
+            GridView3.DataBind();
+        }
+
+        protected void GridView3_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+            Button1_ModalPopupExtender.Show();
+            int id = Convert.ToInt32(GridView3.DataKeys[e.RowIndex].Values[0]);
+            Application["idejecucionglobal3"] = id;
+            EjecucionBLL nuev = new EjecucionBLL();
+            GridView1.DataSource = nuev.listaEjecucionesRechazadas();
+            GridView1.DataBind();
         }
     }
 }

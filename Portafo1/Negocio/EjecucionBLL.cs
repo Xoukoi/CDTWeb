@@ -68,6 +68,44 @@ namespace Portafo1.Negocio
             return lista;
 
         }
+
+        public List<EjecucionBLL> listaEjecucionesRechazadas()
+        {
+            ServiceReference1.WebService1SoapClient wcf = new ServiceReference1.WebService1SoapClient();
+            List<EjecucionBLL> lista = new List<EjecucionBLL>();
+
+            string tipo = "";
+
+            foreach (var item in wcf.ListarEjecucionesRechazadas())
+            {
+
+                EjecucionBLL otro = new EjecucionBLL();
+                otro.idEjecu = item.idEjec;
+                otro.descripcionEje = item.descrip;
+                otro.fechaInicio = item.fechaInicio;
+                otro.fechaTermino = item.fechaTermino;
+                otro.semaforo = item.semaforo;
+                otro.notficacion = item.notifi;
+                if (item.tipota == 1)
+                {
+                    tipo = "Normal";
+                }
+                else
+                {
+                    tipo = "Tarea de flujo";
+                }
+                otro.tipotarea = tipo;
+                otro.nombreTarea = item.nombreta;
+                otro.descripcionTarea = item.descripcionTar;
+                otro.observacionTarea = item.observacionTar;
+                otro.adjudicador = item.rutAdjudicador;
+                lista.Add(otro);
+
+            }
+            return lista;
+
+        }
+
         public List<EjecucionBLL> listaEjecucionesAceptadas(string rut)
         {
             ServiceReference1.WebService1SoapClient wcf = new ServiceReference1.WebService1SoapClient();

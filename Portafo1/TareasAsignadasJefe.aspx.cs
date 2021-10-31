@@ -9,9 +9,13 @@ using Portafo1.Negocio;
 namespace Portafo1
 {
     public partial class TareasAsignadasJefe : System.Web.UI.Page
+
     {
+        public string lawea { get; set; }
+
         protected void Page_Load(object sender, EventArgs e)
         {
+            lawea = "tuvieja";
             if (!IsPostBack)
             {
                 EjecucionBLL nuev = new EjecucionBLL();

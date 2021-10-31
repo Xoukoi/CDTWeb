@@ -286,6 +286,16 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="ListarEjecucionesRechazadas">
+        <s:complexType />
+      </s:element>
+      <s:element name="ListarEjecucionesRechazadasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListarEjecucionesRechazadasResult" type="tns:ArrayOfEjecucionN" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="ListarEjecucionesRevisadas">
         <s:complexType>
           <s:sequence>
@@ -385,6 +395,20 @@
         <s:complexType>
           <s:sequence>
             <s:element minOccurs="0" maxOccurs="1" name="BuscarNombresProcesosResult" type="tns:ArrayOfNombreProceN" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarCorreo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="rut" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarCorreoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BuscarCorreoResult" type="tns:ArrayOfNombreProceN" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -721,6 +745,12 @@
   <wsdl:message name="ListarEjecucionesTerminadasSoapOut">
     <wsdl:part name="parameters" element="tns:ListarEjecucionesTerminadasResponse" />
   </wsdl:message>
+  <wsdl:message name="ListarEjecucionesRechazadasSoapIn">
+    <wsdl:part name="parameters" element="tns:ListarEjecucionesRechazadas" />
+  </wsdl:message>
+  <wsdl:message name="ListarEjecucionesRechazadasSoapOut">
+    <wsdl:part name="parameters" element="tns:ListarEjecucionesRechazadasResponse" />
+  </wsdl:message>
   <wsdl:message name="ListarEjecucionesRevisadasSoapIn">
     <wsdl:part name="parameters" element="tns:ListarEjecucionesRevisadas" />
   </wsdl:message>
@@ -756,6 +786,12 @@
   </wsdl:message>
   <wsdl:message name="BuscarNombresProcesosSoapOut">
     <wsdl:part name="parameters" element="tns:BuscarNombresProcesosResponse" />
+  </wsdl:message>
+  <wsdl:message name="BuscarCorreoSoapIn">
+    <wsdl:part name="parameters" element="tns:BuscarCorreo" />
+  </wsdl:message>
+  <wsdl:message name="BuscarCorreoSoapOut">
+    <wsdl:part name="parameters" element="tns:BuscarCorreoResponse" />
   </wsdl:message>
   <wsdl:message name="BuscarIdTareasSoapIn">
     <wsdl:part name="parameters" element="tns:BuscarIdTareas" />
@@ -926,6 +962,10 @@
       <wsdl:input message="tns:ListarEjecucionesTerminadasSoapIn" />
       <wsdl:output message="tns:ListarEjecucionesTerminadasSoapOut" />
     </wsdl:operation>
+    <wsdl:operation name="ListarEjecucionesRechazadas">
+      <wsdl:input message="tns:ListarEjecucionesRechazadasSoapIn" />
+      <wsdl:output message="tns:ListarEjecucionesRechazadasSoapOut" />
+    </wsdl:operation>
     <wsdl:operation name="ListarEjecucionesRevisadas">
       <wsdl:input message="tns:ListarEjecucionesRevisadasSoapIn" />
       <wsdl:output message="tns:ListarEjecucionesRevisadasSoapOut" />
@@ -949,6 +989,10 @@
     <wsdl:operation name="BuscarNombresProcesos">
       <wsdl:input message="tns:BuscarNombresProcesosSoapIn" />
       <wsdl:output message="tns:BuscarNombresProcesosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarCorreo">
+      <wsdl:input message="tns:BuscarCorreoSoapIn" />
+      <wsdl:output message="tns:BuscarCorreoSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="BuscarIdTareas">
       <wsdl:input message="tns:BuscarIdTareasSoapIn" />
@@ -1179,6 +1223,15 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="ListarEjecucionesRechazadas">
+      <soap:operation soapAction="http://tempuri.org/ListarEjecucionesRechazadas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="ListarEjecucionesRevisadas">
       <soap:operation soapAction="http://tempuri.org/ListarEjecucionesRevisadas" style="document" />
       <wsdl:input>
@@ -1226,6 +1279,15 @@
     </wsdl:operation>
     <wsdl:operation name="BuscarNombresProcesos">
       <soap:operation soapAction="http://tempuri.org/BuscarNombresProcesos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarCorreo">
+      <soap:operation soapAction="http://tempuri.org/BuscarCorreo" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1542,6 +1604,15 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="ListarEjecucionesRechazadas">
+      <soap12:operation soapAction="http://tempuri.org/ListarEjecucionesRechazadas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="ListarEjecucionesRevisadas">
       <soap12:operation soapAction="http://tempuri.org/ListarEjecucionesRevisadas" style="document" />
       <wsdl:input>
@@ -1589,6 +1660,15 @@
     </wsdl:operation>
     <wsdl:operation name="BuscarNombresProcesos">
       <soap12:operation soapAction="http://tempuri.org/BuscarNombresProcesos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarCorreo">
+      <soap12:operation soapAction="http://tempuri.org/BuscarCorreo" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

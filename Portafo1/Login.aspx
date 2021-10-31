@@ -24,24 +24,64 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <style>
+        body {
+            background: #0F2027;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            display: flex;
+            justify-content: center;
+            align-content: center;
+        }
+
+        .main-container {
+            background-color: #fefefe; 
+            width: fit-content; 
+            margin-top: 10%; 
+            border-radius: 15px;
+        }
+
+        .logo-container {
+            display: flex; 
+            justify-content:center; 
+            align-content:center; 
+            align-items: center;
+        }
+
+        .logo {
+            width: 35%; 
+            margin: 15px;
+        }
+
+        .login-box {
+            display: flex; 
+            justify-content:center; 
+            align-content: center; 
+            align-items: center;
+        }
+    </style>
 </head>
 <body>
 
-        <div>
-            <div class="login-box">
-      <div class="login-box-body">
-        <h4>Ingrese sus datos</h4>
-          <br />
+    <div class="main-container">
+        <div class="logo-container">
+            <img class="logo" src="./imgs/logo.jpg"/>
+        </div>
+        <div class="login-box">
+            <div class="login-box-body">
+                <h4 style="text-align: center;">Ingrese sus datos</h4>
+                <br />
 
-        <form id="form2" runat="server">
+                <form id="form2" runat="server">
 
 
                     <div class="col-md-6 text-center mb-5">
                     </div>
                     <br />
-                              <br />
-          <br />
+                    <br />
+                    <br />
                     <asp:Label ID="Label5" runat="server" Text="Usuario:"></asp:Label>
                     <asp:TextBox ID="TextBox1" CssClass="form-control" runat="server" placeholder="Rut"></asp:TextBox>
                     <br />
@@ -50,7 +90,7 @@
                     <br />
 
                     <br />
-                    <div class="row">
+                    <div class="row" style="display: flex; justify-content: center">
                         <asp:Button ID="Button2" runat="server" CssClass="btn btn-primary btn-dark" Text="Ingresar" OnClick="Button1_Click" />
                     </div>
                     <br />
@@ -60,13 +100,15 @@
                         <asp:Label ID="Label7" runat="server" />
                     </div>
 
-            </form>
+                </form>
 
-      </div><!-- /.login-box-body -->
-    </div><!-- /.login-box -->
-
-
+            </div>
+            <!-- /.login-box-body -->
         </div>
+        <!-- /.login-box -->
+
+
+    </div>
 
 </body>
 </html>

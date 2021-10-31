@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Home.Master" AutoEventWireup="true" CodeBehind="TareasAsignadasJefe.aspx.cs" Inherits="Portafo1.TareasAsignadasJefe" %>
 <%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="cc1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="padre">
@@ -96,6 +97,7 @@
         <h2>-------------------------------------------------------------------------------------</h2>
         <h2>Tareas en ejecución</h2>
     </div>
+        
     <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" AllowPaging="True" DataKeyNames="idEjecu" CssClass="table table-striped table-bordered table-hover" OnPageIndexChanging="GridView2_PageIndexChanging" OnRowDeleting="rowDeletingEvent2" OnSelectedIndexChanged="GridView2_SelectedIndexChanged">
         <Columns>
             <asp:TemplateField HeaderText="idEjecu">
@@ -123,16 +125,16 @@
                     <asp:Label ID="Label24" runat="server" Text='<%# Bind("FechaEjec") %>'></asp:Label>
                 </ItemTemplate>
             </asp:TemplateField>
-            <asp:TemplateField HeaderText="Proximidad a la fecha de término">
-                <ItemTemplate>
-                    <div style="background-color:colorrr">
-                    <asp:Label ID="Label25" runat="server" Text='<%# Bind("semaforo") %>'></asp:Label>
-                    </div>
-                </ItemTemplate>
+            <asp:TemplateField HeaderText="Días para fecha límite">
+                    <ItemTemplate>
+                        <asp:Label ID="Label25" runat="server" Text='<%# Bind("semaforo") %>'></asp:Label>
+                    </ItemTemplate>
             </asp:TemplateField>
-                        <asp:TemplateField HeaderText="semaforo">
+            <asp:TemplateField HeaderText="semaforo">
                 <ItemTemplate>
-                    <asp:Label ID="Label13" runat="server" Text='<%# Bind("color") %>'></asp:Label>
+                    <div class="semaforo" style="width: 100%; height: 100%">
+                        <asp:Label ID="Label13" runat="server" Text='<%# Bind("color") %>'></asp:Label>
+                    </div>
                 </ItemTemplate>
             </asp:TemplateField>
                         <asp:TemplateField HeaderText="Nombre tarea">
