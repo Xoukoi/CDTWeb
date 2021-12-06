@@ -1,0 +1,500 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MindFusion.Reporting.Wpf.HtmlExport</name>
+    </assembly>
+    <members>
+        <member name="T:MindFusion.Reporting.Wpf.Export.HtmlRenderTargetBase">
+            <summary>
+            An implementation of the IRenderTarget, which renders a report as HTML.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Reporting.Wpf.Export.HtmlRenderTargetBase.#ctor">
+            <summary>
+            Initializes a new instance of the HtmlRenderTargetBase class.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Reporting.Wpf.Export.HtmlRenderTargetBase.MindFusion#Reporting#Wpf#IRenderTarget#AddPage(System.Windows.Size)">
+            <summary>
+            IRenderTarget.AddPage explicit implementation.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Reporting.Wpf.Export.HtmlRenderTargetBase.RenderHtmlRect(System.Double,System.Double,System.Double,System.Double,System.String,System.String,System.Int32,System.Windows.Thickness,System.String,System.String,System.Int32)">
+            <summary>
+            Creates a HTML table representing the specified rectangle.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Reporting.Wpf.Export.HtmlRenderTargetBase.RenderHtmlOpacity(System.Int32)">
+            <summary>
+            Creates a HTML code representing the specfied opacity.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Reporting.Wpf.Export.HtmlRenderTargetBase.MindFusion#Reporting#Wpf#IRenderTarget#Render(System.Windows.UIElement,System.Double,System.Double)">
+            <summary>
+            IRenderTarget.Render explicit implementation.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Reporting.Wpf.Export.HtmlRenderTargetBase.MindFusion#Reporting#Wpf#IRenderTarget#Translate(System.Double,System.Double)">
+            <summary>
+            IRenderTarget.Translate explicit implementation.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Reporting.Wpf.Export.HtmlRenderTargetBase.MindFusion#Reporting#Wpf#IRenderTarget#BeginRender">
+            <summary>
+            IRenderTarget.BeginRender implementation.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Reporting.Wpf.Export.HtmlRenderTargetBase.MindFusion#Reporting#Wpf#IRenderTarget#EndRender">
+            <summary>
+            IRenderTarget.EndRender implementation.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Reporting.Wpf.Export.HtmlRenderTargetBase.Save(System.String)">
+            <summary>
+            Saves the rendered HTML to a file with the specified name.
+            </summary>
+            <param name="fileName">
+            The file name where the HTML will be saved.
+            </param>
+        </member>
+        <member name="M:MindFusion.Reporting.Wpf.Export.HtmlRenderTargetBase.Save(System.IO.Stream)">
+            <summary>
+            Saves the rendered HTML to stream.
+            </summary>
+            <param name="stream">
+            The stream where the HTML will be saved.
+            </param>
+        </member>
+        <member name="M:MindFusion.Reporting.Wpf.Export.HtmlRenderTargetBase.GetHtml">
+            <summary>
+            Returns the rendered HTML as string.
+            </summary>
+            <returns>
+            A string representing the rendered HTML.
+            </returns>
+        </member>
+        <member name="M:MindFusion.Reporting.Wpf.Export.HtmlRenderTargetBase.OnBeginRender">
+            <summary>
+            Invoked when renedring is about to start.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Reporting.Wpf.Export.HtmlRenderTargetBase.OnRenderHead(System.Text.StringBuilder)">
+            <summary>
+            Invoked when rendering the head tag of the HTML.
+            </summary>
+            <param name="html">
+            A StringBuilder to write custom head tags to.
+            </param>
+        </member>
+        <member name="M:MindFusion.Reporting.Wpf.Export.HtmlRenderTargetBase.OnProcessImage(MindFusion.Reporting.Wpf.Export.ImageEventArgs)">
+            <summary>
+            Raises the ProcessImage event.
+            </summary>
+            <param name="e">
+            An object providing the event data.
+            </param>
+        </member>
+        <member name="F:MindFusion.Reporting.Wpf.Export.HtmlRenderTargetBase.InvariantCulture">
+            <summary>
+            An invariant culture.
+            </summary>
+        </member>
+        <member name="F:MindFusion.Reporting.Wpf.Export.HtmlRenderTargetBase.html">
+            <summary>
+            A string builder.
+            </summary>
+        </member>
+        <member name="F:MindFusion.Reporting.Wpf.Export.HtmlRenderTargetBase.translatex">
+            <summary>
+            An accumulated translation along the x-axis.
+            </summary>
+        </member>
+        <member name="F:MindFusion.Reporting.Wpf.Export.HtmlRenderTargetBase.translatey">
+            <summary>
+            An accumulated translation along the y-axis.
+            </summary>
+        </member>
+        <member name="F:MindFusion.Reporting.Wpf.Export.HtmlRenderTargetBase.previousPageHeight">
+            <summary>
+            The height of the previously rendered page. Added to translatey when the
+            next page starts to render.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Reporting.Wpf.Export.HtmlRenderTargetBase.MetaTags">
+            <summary>
+            Gets a list containing the names and values of the meta-tags
+            to be included in the HTML head.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Reporting.Wpf.Export.HtmlRenderTargetBase.Title">
+            <summary>
+            Gets or sets the title of the resulting HTML.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Reporting.Wpf.Export.HtmlRenderTargetBase.RenderPages">
+            <summary>
+            Gets or sets a value indicating whether to render white rectangle
+            with black borders for each page in the report.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Reporting.Wpf.Export.HtmlRenderTargetBase.RenderPageShadows">
+            <summary>
+            Gets or sets a value indicating whether to draw rectangular page shadows.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Reporting.Wpf.Export.HtmlRenderTargetBase.RenderOpacity">
+            <summary>
+            Gets or sets a value indicating whether the export should include opacity information
+            for various elements.
+            </summary>
+        </member>
+        <member name="E:MindFusion.Reporting.Wpf.Export.HtmlRenderTargetBase.ProcessImage">
+            <summary>
+            Raised when the underlying HTML is rendered in order to process a referenced image.
+            </summary>
+        </member>
+        <member name="T:MindFusion.Reporting.Wpf.Export.MhtmlRenderTarget">
+            <summary>
+            An implementation of the HtmlRenderTargetBase, which renders reports to MHTML.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Reporting.Wpf.Export.MhtmlRenderTarget.#ctor">
+            <summary>
+            Initializes a new instance of the MhtmlRenderTarget class.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Reporting.Wpf.Export.MhtmlRenderTarget.OnBeginRender">
+            <summary>
+            HtmlRenderTargetBase.OnBeginRender override.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Reporting.Wpf.Export.MhtmlRenderTarget.OnRenderHead(System.Text.StringBuilder)">
+            <summary>
+            HtmlRenderTargetBase.OnRenderHead override.
+            </summary>
+            <param name="html">
+            A StringBuilder to write custom head tags to.
+            </param>
+        </member>
+        <member name="M:MindFusion.Reporting.Wpf.Export.MhtmlRenderTarget.OnProcessImage(MindFusion.Reporting.Wpf.Export.ImageEventArgs)">
+            <summary>
+            HtmlRenderTargetBase.OnProcessImage override.
+            </summary>
+            <param name="e">
+            An object providing the event data.
+            </param>
+        </member>
+        <member name="M:MindFusion.Reporting.Wpf.Export.MhtmlRenderTarget.Save(System.IO.Stream)">
+            <summary>
+            HtmlRenderTargetBase.Save override.
+            </summary>
+            <param name="stream">
+            The stream where the HTML will be saved.
+            </param>
+        </member>
+        <member name="P:MindFusion.Reporting.Wpf.Export.MhtmlRenderTarget.SplitImageContent">
+            <summary>
+            Gets or sets a value indicating whether the content of images inside the rendered
+            MHTML should be split to individual lines that do not exceed 80 characters.
+            </summary>
+        </member>
+        <member name="T:MindFusion.Reporting.Wpf.Export.HtmlExporter">
+            <summary>
+            Exports reports to HTML files.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Reporting.Wpf.Export.HtmlExporter.#ctor">
+            <summary>
+            Initializes a new instance of the HtmlExporter class.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Reporting.Wpf.Export.HtmlExporter.Export(MindFusion.Reporting.Wpf.Report,System.String,System.String)">
+            <summary>
+            Creates an HTML file representing the specified report.
+            </summary>
+            <param name="report">
+            A reference to the report that will be exported.
+            </param>
+            <param name="filePath">
+            The full path to the HTML file.
+            </param>
+            <param name="imageFolder">
+            The path to the folder where the report images will be stored.
+            </param>
+        </member>
+        <member name="P:MindFusion.Reporting.Wpf.Export.HtmlExporter.PageSize">
+            <summary>
+            Gets or sets the size for the exported pages.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Reporting.Wpf.Export.HtmlExporter.PageOrientation">
+            <summary>
+            Gets or sets the page orientation.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Reporting.Wpf.Export.HtmlExporter.Margins">
+            <summary>
+            Gets or sets the margins for the exported pages.
+            </summary>
+        </member>
+        <member name="T:MindFusion.Reporting.Wpf.Export.MhtmlExporter">
+            <summary>
+            Exports reports to MHTML files.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Reporting.Wpf.Export.MhtmlExporter.#ctor">
+            <summary>
+            Initializes a new instance of the MhtmlExporter class.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Reporting.Wpf.Export.MhtmlExporter.Export(MindFusion.Reporting.Wpf.Report,System.String)">
+            <summary>
+            Creates an MHTML file representing the specified report.
+            </summary>
+            <param name="report">
+            A reference to the report that will be exported.
+            </param>
+            <param name="filePath">
+            The full path to the MHTML file.
+            </param>
+        </member>
+        <member name="M:MindFusion.Reporting.Wpf.Export.MhtmlExporter.Export(MindFusion.Reporting.Wpf.Report,System.IO.Stream)">
+            <summary>
+            Creates an MHTML file representing the specified report.
+            </summary>
+            <param name="report">
+            A reference to the report that will be exported.
+            </param>
+            <param name="stream">
+            The stream to write to.
+            </param>
+        </member>
+        <member name="P:MindFusion.Reporting.Wpf.Export.MhtmlExporter.PageSize">
+            <summary>
+            Gets or sets the size for the exported pages.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Reporting.Wpf.Export.MhtmlExporter.PageOrientation">
+            <summary>
+            Gets or sets the page orientation.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Reporting.Wpf.Export.MhtmlExporter.Margins">
+            <summary>
+            Gets or sets the margins for the exported pages.
+            </summary>
+        </member>
+        <member name="T:MindFusion.Reporting.Wpf.Export.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Reporting.Wpf.Export.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Reporting.Wpf.Export.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="T:MindFusion.Reporting.Wpf.Export.MetaTagNames">
+            <summary>
+            Provides common HTML meta-tag names.
+            </summary>
+        </member>
+        <member name="F:MindFusion.Reporting.Wpf.Export.MetaTagNames.Abstract">
+            <summary>
+            The "abstract" tag. Define a secondary description. 
+            </summary>
+        </member>
+        <member name="F:MindFusion.Reporting.Wpf.Export.MetaTagNames.Author">
+            <summary>
+            The "author" tag. Records the name of the author of the document.
+            </summary>
+        </member>
+        <member name="F:MindFusion.Reporting.Wpf.Export.MetaTagNames.Classification">
+            <summary>
+            The "classification" tag. Classify the site into the appropriate category.
+            </summary>
+        </member>
+        <member name="F:MindFusion.Reporting.Wpf.Export.MetaTagNames.Copyright">
+            <summary>
+            The "copyright" tag. Used to include copyright information in the document.
+            </summary>
+        </member>
+        <member name="F:MindFusion.Reporting.Wpf.Export.MetaTagNames.Description">
+            <summary>
+            The "description" tag. Some search engines pick up this description to show with the results of searches.
+            </summary>
+        </member>
+        <member name="F:MindFusion.Reporting.Wpf.Export.MetaTagNames.Distribution">
+            <summary>
+            The "distribution" tag. Declares whether a document is available to
+            the web or on an intranet. Possible content values are "Global", "Local", "IU".
+            </summary>
+        </member>
+        <member name="F:MindFusion.Reporting.Wpf.Export.MetaTagNames.DocClass">
+            <summary>
+            The "doc-class" tag. Indicates completion status of document. Possible
+            values are "Completed", "Draft", "Living Document", "Published".
+            </summary>
+        </member>
+        <member name="F:MindFusion.Reporting.Wpf.Export.MetaTagNames.DocRights">
+            <summary>
+            The "doc-rights" tag. Indicates copyright status of document. Possible
+            values are "Copywritten Work", "Private", "Public", "Public Domain".
+            </summary>
+        </member>
+        <member name="F:MindFusion.Reporting.Wpf.Export.MetaTagNames.DocType">
+            <summary>
+            The "doc-type" tag. Specifies type of document. Possible content values
+            are "Confidential Company Papers", "eZine", "Government", "Journal",
+            "Manuscript", "Paper", "Private", "Public", "Web Page", "White Paper".
+            </summary>
+        </member>
+        <member name="F:MindFusion.Reporting.Wpf.Export.MetaTagNames.Expires">
+            <summary>
+            The "expires" tag. Expiration date of the document.
+            </summary>
+        </member>
+        <member name="F:MindFusion.Reporting.Wpf.Export.MetaTagNames.Generator">
+            <summary>
+            The "generator" tag. The name of the program that created the document.
+            </summary>
+        </member>
+        <member name="F:MindFusion.Reporting.Wpf.Export.MetaTagNames.Googlebot">
+            <summary>
+            The "googlebot" tag. Define pages to be excluded from googebot indexing.
+            Possible content values are "all", "index, follow", "noindex, follow",
+            "index, nofollow", "noindex, nofollow", "none", "nosnippet", "noarchive".
+            </summary>
+        </member>
+        <member name="F:MindFusion.Reporting.Wpf.Export.MetaTagNames.Keywords">
+            <summary>
+            The "keywords" tag. Inform search engines what your web site or page is about.
+            </summary>
+        </member>
+        <member name="F:MindFusion.Reporting.Wpf.Export.MetaTagNames.MSSmartTagsPreventParsing">
+            <summary>
+            The "MSSmartTagsPreventParsing" tag. Use this tag to prevent
+            any Microsoft product from automatically generating smart tags.
+            Possible content value is "TRUE".
+            </summary>
+        </member>
+        <member name="F:MindFusion.Reporting.Wpf.Export.MetaTagNames.Owner">
+            <summary>
+            The "owner" tag. Define the owner of the page or site.
+            </summary>
+        </member>
+        <member name="F:MindFusion.Reporting.Wpf.Export.MetaTagNames.ProgId">
+            <summary>
+            The "progid" tag.
+            </summary>
+        </member>
+        <member name="F:MindFusion.Reporting.Wpf.Export.MetaTagNames.Rating">
+            <summary>
+            The "rating" tag. A simple rating for a site.
+            </summary>
+        </member>
+        <member name="F:MindFusion.Reporting.Wpf.Export.MetaTagNames.Refresh">
+            <summary>
+            The "refresh" tag. Indicates the document displays for a specified
+            amount of time before switching to a new URL. The content value should
+            be in the format "n;url", where "n" is the number of seconds to wait
+            before loading the URL specified by "url".
+            </summary>
+        </member>
+        <member name="F:MindFusion.Reporting.Wpf.Export.MetaTagNames.ReplyTo">
+            <summary>
+            The "reply-to" tag. Email address of contact for document.
+            </summary>
+        </member>
+        <member name="F:MindFusion.Reporting.Wpf.Export.MetaTagNames.ResourceType">
+            <summary>
+            The "resource-type" tag. Indicates the type of web resource. Possible
+            content value is "document".
+            </summary>
+        </member>
+        <member name="F:MindFusion.Reporting.Wpf.Export.MetaTagNames.RevisitAfter">
+            <summary>
+            The "revisit-after" tag. Defines how often search engine spiders
+            should revisit your site.
+            </summary>
+        </member>
+        <member name="F:MindFusion.Reporting.Wpf.Export.MetaTagNames.Robots">
+            <summary>
+            The "robots" tag. Defines pages to be excluded from robot indexing.
+            Possible values are "all", "index, follow", "noindex, follow",
+            "index, nofollow", "noindex, nofollow", "none", "noimageindex".
+            </summary>
+        </member>
+        <member name="T:MindFusion.Reporting.Wpf.Export.ImageEventArgs">
+            <summary>
+            Provides information for image-related events during HTML rendering.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Reporting.Wpf.Export.ImageEventArgs.#ctor(System.Windows.Media.Imaging.BitmapSource)">
+            <summary>
+            Initializes a new instance of the ImageEventArgs class.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Reporting.Wpf.Export.ImageEventArgs.Image">
+            <summary>
+            Gets the image related to the event.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Reporting.Wpf.Export.ImageEventArgs.IsProcessed">
+            <summary>
+            Gets or sets a value indicating whether the image has been processed.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Reporting.Wpf.Export.ImageEventArgs.Url">
+            <summary>
+            Gets or sets the desired URL of the image.
+            </summary>
+            <remarks>
+            This URL will be written in the output HTML file.
+            </remarks>
+        </member>
+        <member name="T:MindFusion.Reporting.Wpf.Export.HtmlRenderTarget">
+            <summary>
+            An implementation of the HtmlRenderTargetBase, which renders reports to HTML.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Reporting.Wpf.Export.HtmlRenderTarget.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the HtmlRenderTarget class.
+            </summary>
+            <param name="rootFolder">
+            The destination folder.
+            </param>
+            <param name="imageFolder">
+            The image folder, which should be relative to rootFolder or an empty string.
+            </param>
+        </member>
+        <member name="M:MindFusion.Reporting.Wpf.Export.HtmlRenderTarget.OnProcessImage(MindFusion.Reporting.Wpf.Export.ImageEventArgs)">
+            <summary>
+            HtmlRenderTargetBase.OnProcessImage override.
+            </summary>
+            <param name="e">
+            An object providing the event data.
+            </param>
+        </member>
+        <member name="M:MindFusion.Reporting.Wpf.Export.HtmlRenderTarget.CreateDirectory(System.String)">
+            <summary>
+            Recursively creates all missing directories in the specified path.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Reporting.Wpf.Export.HtmlRenderTarget.Save(System.IO.Stream)">
+            <summary>
+            Saves the rendered HTML to stream.
+            </summary>
+            <param name="stream">
+            The stream where the HTML will be saved.
+            </param>
+        </member>
+    </members>
+</doc>

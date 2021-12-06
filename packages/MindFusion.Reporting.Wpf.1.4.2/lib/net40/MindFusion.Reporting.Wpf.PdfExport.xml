@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MindFusion.Reporting.Wpf.PdfExport</name>
+    </assembly>
+    <members>
+        <member name="T:MindFusion.Reporting.Wpf.Export.PdfExporter">
+            <summary>
+            Exports reports to Adobe Portable Document Format (PDF) files.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Reporting.Wpf.Export.PdfExporter.#ctor">
+            <summary>
+            Initializes a new instance of the PdfExporter class.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Reporting.Wpf.Export.PdfExporter.Export(MindFusion.Reporting.Wpf.Report,System.String)">
+            <summary>
+            Creates a PDF file representing the specified report.
+            </summary>
+            <param name="report">
+            A reference to the report that will be exported.
+            </param>
+            <param name="filePath">
+            The full path to the PDF file.
+            </param>
+        </member>
+        <member name="P:MindFusion.Reporting.Wpf.Export.PdfExporter.PageOrientation">
+            <summary>
+            Gets or sets the page orientation.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Reporting.Wpf.Export.PdfExporter.PageSize">
+            <summary>
+            Gets or sets the page size.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Reporting.Wpf.Export.PdfExporter.Margins">
+            <summary>
+            Gets or sets the page margins.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Reporting.Wpf.Export.PdfExporter.DefaultEncoding">
+            <summary>
+            Gets or sets the encoding of the exported texts, or null,
+            to automatically detect the encoding.
+            </summary>
+        </member>
+        <member name="T:MindFusion.Reporting.Wpf.Export.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Reporting.Wpf.Export.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Reporting.Wpf.Export.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+    </members>
+</doc>

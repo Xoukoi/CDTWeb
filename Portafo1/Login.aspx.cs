@@ -64,16 +64,16 @@ namespace Portafo1
                         smtp.EnableSsl = true;
 
 
-                        string body = "<body>" +
-                                " Tiene tareas atrasadas" +
+                        string body = "   " +
+                                " Tiene tareas atrasadas   " +
 
-                                "Todos los detalles en www.processSA.com" +
+                                "Todos los detalles en www.processSA.com   " +
 
-                                "" +
+                                "    " +
 
-                                "Buenas gestiones - Process S.A." +
-
-                                "";
+                                "    Buenas gestiones - Process S.A.   " +
+                                  
+                                "    ";
 
 
                         MailMessage mail = new MailMessage();
@@ -120,12 +120,12 @@ namespace Portafo1
                         smtp.EnableSsl = true;
 
 
-                        string body = "<body>" +
-                                " Tiene tareas atrasadas" +
+                        string body = "  " +
+                                " Tiene tareas atrasadas  " +
 
-                                "Todos los detalles en www.processSA.com" +
+                                "Todos los detalles en www.processSA.com    " +
 
-                                "" +
+                                "  " +
 
                                 "Buenas gestiones - Process S.A." +
 

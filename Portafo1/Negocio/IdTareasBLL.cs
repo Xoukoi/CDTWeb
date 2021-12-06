@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using FusionCharts.DataEngine;
+using FusionCharts.Visualization;
+using System.Data;
 
 namespace Portafo1.Negocio
 {
@@ -223,6 +226,21 @@ namespace Portafo1.Negocio
             }
             return or;
 
+        }
+
+        public DataTable loq()
+        {
+            DataTable ChartData = new DataTable();
+
+
+            // Add rows to data table
+            ChartData.Rows.Add("Java", 62000);
+            ChartData.Rows.Add("Python", 46000);
+            ChartData.Rows.Add("Javascript", 38000);
+            ChartData.Rows.Add("C++", 31000);
+ 
+
+            return ChartData;
         }
     }
 }

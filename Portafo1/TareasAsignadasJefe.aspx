@@ -8,56 +8,58 @@
         <h2>Nuevas tareas asignadas</h2>
     </div>
     <asp:Calendar ID="Calendar1" runat="server" style="display:none"></asp:Calendar>
-    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" AllowPaging="True" OnPageIndexChanging="GridView1_PageIndexChanging" DataKeyNames="idEjecu" CssClass="table table-striped table-bordered table-hover" OnRowDeleting="rowDeletingEvent" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
-        <Columns>
-            <asp:TemplateField HeaderText="idEjecu">
-                <ItemTemplate>
-                    <asp:Label ID="Label1" runat="server" Text='<%# Bind("idEjecu") %>'></asp:Label>
-                </ItemTemplate>
-            </asp:TemplateField>
-                        <asp:TemplateField HeaderText="Acotación del encargado">
-                <ItemTemplate>
-                    <asp:Label ID="Label2" runat="server" Text='<%# Bind("descripcionEje") %>'></asp:Label>
-                </ItemTemplate>
-            </asp:TemplateField>
-                        <asp:TemplateField HeaderText="Fecha de inicio">
-                <ItemTemplate>
-                    <asp:Label ID="Label3" runat="server" Text='<%# Bind("fechainicio") %>'></asp:Label>
-                </ItemTemplate>
-            </asp:TemplateField>
-                        <asp:TemplateField HeaderText="Fecha de termino">
-                <ItemTemplate>
-                    <asp:Label ID="Label4" runat="server" Text='<%# Bind("fechaTermino") %>'></asp:Label>
-                </ItemTemplate>
-            </asp:TemplateField>
-                        <asp:TemplateField HeaderText="Rut del asignador de tarea">
-                <ItemTemplate>
-                    <asp:Label ID="Label5" runat="server" Text='<%# Bind("adjudicador") %>'></asp:Label>
-                </ItemTemplate>
-            </asp:TemplateField>
-                        <asp:TemplateField HeaderText="Tipo de tarea">
-                <ItemTemplate>
-                    <asp:Label ID="Label6" runat="server" Text='<%# Bind("tipotarea") %>'></asp:Label>
-                </ItemTemplate>
-            </asp:TemplateField>
-                        <asp:TemplateField HeaderText="Nombre de la tarea">
-                <ItemTemplate>
-                    <asp:Label ID="Label7" runat="server" Text='<%# Bind("nombreTarea") %>'></asp:Label>
-                </ItemTemplate>
-            </asp:TemplateField>
-                        <asp:TemplateField HeaderText="Descripción de la tarea">
-                <ItemTemplate>
-                    <asp:Label ID="Label8" runat="server" Text='<%# Bind("descripcionTarea") %>'></asp:Label>
-                </ItemTemplate>
-            </asp:TemplateField>
-                        <asp:TemplateField HeaderText="Observaciones">
-                <ItemTemplate>
-                    <asp:Label ID="Label9" runat="server" Text='<%# Bind("observacionTarea") %>'></asp:Label>
-                </ItemTemplate>
-            </asp:TemplateField>
-            <asp:CommandField ButtonType="Button" ShowDeleteButton="true" DeleteText="Aceptar/rechazar"/>
-        </Columns>
-    </asp:GridView>
+    <div class=".table-responsive">
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" AllowPaging="True" OnPageIndexChanging="GridView1_PageIndexChanging" DataKeyNames="idEjecu" CssClass="table table-striped table-bordered table-hover" OnRowDeleting="rowDeletingEvent" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
+            <Columns>
+                <asp:TemplateField HeaderText="idEjecu">
+                    <ItemTemplate>
+                        <asp:Label ID="Label1" runat="server" Text='<%# Bind("idEjecu") %>'></asp:Label>
+                    </ItemTemplate>
+                </asp:TemplateField>
+                <asp:TemplateField HeaderText="Acotación del encargado">
+                    <ItemTemplate>
+                        <asp:Label ID="Label2" runat="server" Text='<%# Bind("descripcionEje") %>'></asp:Label>
+                    </ItemTemplate>
+                </asp:TemplateField>
+                <asp:TemplateField HeaderText="Fecha de inicio">
+                    <ItemTemplate>
+                        <asp:Label ID="Label3" runat="server" Text='<%# Bind("fechainicio") %>'></asp:Label>
+                    </ItemTemplate>
+                </asp:TemplateField>
+                <asp:TemplateField HeaderText="Fecha de termino">
+                    <ItemTemplate>
+                        <asp:Label ID="Label4" runat="server" Text='<%# Bind("fechaTermino") %>'></asp:Label>
+                    </ItemTemplate>
+                </asp:TemplateField>
+                <asp:TemplateField HeaderText="Rut del asignador de tarea">
+                    <ItemTemplate>
+                        <asp:Label ID="Label5" runat="server" Text='<%# Bind("adjudicador") %>'></asp:Label>
+                    </ItemTemplate>
+                </asp:TemplateField>
+                <asp:TemplateField HeaderText="Tipo de tarea">
+                    <ItemTemplate>
+                        <asp:Label ID="Label6" runat="server" Text='<%# Bind("tipotarea") %>'></asp:Label>
+                    </ItemTemplate>
+                </asp:TemplateField>
+                <asp:TemplateField HeaderText="Nombre de la tarea">
+                    <ItemTemplate>
+                        <asp:Label ID="Label7" runat="server" Text='<%# Bind("nombreTarea") %>'></asp:Label>
+                    </ItemTemplate>
+                </asp:TemplateField>
+                <asp:TemplateField HeaderText="Descripción de la tarea">
+                    <ItemTemplate>
+                        <asp:Label ID="Label8" runat="server" Text='<%# Bind("descripcionTarea") %>'></asp:Label>
+                    </ItemTemplate>
+                </asp:TemplateField>
+                <asp:TemplateField HeaderText="Observaciones">
+                    <ItemTemplate>
+                        <asp:Label ID="Label9" runat="server" Text='<%# Bind("observacionTarea") %>'></asp:Label>
+                    </ItemTemplate>
+                </asp:TemplateField>
+                <asp:CommandField ButtonType="Button" ShowDeleteButton="true" DeleteText="Aceptar/rechazar" />
+            </Columns>
+        </asp:GridView>
+    </div>
     <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
 
     <asp:Button ID="Button1" runat="server" Text="Button" style="display:none"/>

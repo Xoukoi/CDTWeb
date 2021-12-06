@@ -61,7 +61,7 @@
             <SelectParameters>
                 <asp:SessionParameter Name="rut" SessionField="rut" Type="String" />
             </SelectParameters>
-        </asp:ObjectDataSource>
+        </asp:ObjectDataSource> 
     </p>
     <p>
         <asp:Label ID="Label5" runat="server" Text="Seleccionar tarea"></asp:Label>
@@ -85,7 +85,7 @@
     </p>
     <p>
 
-                  <asp:Label ID="Label36" runat="server" Text=""></asp:Label>
+                  <asp:Label ID="Label36" runat="server" BackColor="Red" BorderColor="Black"></asp:Label>
 
                   </div>
                   <div class="modal-footer">
@@ -322,5 +322,4 @@
     </asp:Panel>
 <br />
 &nbsp; 
-
-</asp:Content>
+    </asp:Content>

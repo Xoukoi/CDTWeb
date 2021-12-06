@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MindFusion.Reporting.Wpf.ExcelExport</name>
+    </assembly>
+    <members>
+        <member name="T:MindFusion.Reporting.Wpf.Export.ExcelExporter">
+            <summary>
+            Exports MindFusion reports to Microsoft Excel Open XML (XLSX) format.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Reporting.Wpf.Export.ExcelExporter.#ctor">
+            <summary>
+            Initializes a new instance of the ExcelExporter class.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Reporting.Wpf.Export.ExcelExporter.Export(MindFusion.Reporting.Wpf.Report,System.String)">
+            <summary>
+            Creates an Excel file representing the specified report.
+            </summary>
+            <param name="report">
+            A reference to the report that will be exported.
+            </param>
+            <param name="fileName">
+            The full path to the XLSX file.
+            </param>
+        </member>
+        <member name="M:MindFusion.Reporting.Wpf.Export.ExcelExporter.Export(MindFusion.Reporting.Wpf.Report,System.IO.Stream)">
+            <summary>
+            Creates an Excel file representing the specified report.
+            </summary>
+            <param name="report">
+            A reference to the report that will be exported.
+            </param>
+            <param name="stream">
+            The stream that will contain the exported report.
+            </param>
+        </member>
+        <member name="M:MindFusion.Reporting.Wpf.Export.ExcelExporter.BrushToFill(System.Windows.Media.Brush,System.Windows.Size)">
+            <summary>
+            Converts the specified Brush to an Excel fill when applied to an area with
+            the specified size.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Reporting.Wpf.Export.ExcelExporter.PageSize">
+            <summary>
+            Gets or sets the page size.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Reporting.Wpf.Export.ExcelExporter.PageOrientation">
+            <summary>
+            Gets or sets the page orientation.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Reporting.Wpf.Export.ExcelExporter.Margins">
+            <summary>
+            Gets or sets the page margins.
+            </summary>
+        </member>
+        <member name="T:MindFusion.Reporting.Wpf.Export.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Reporting.Wpf.Export.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Reporting.Wpf.Export.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+    </members>
+</doc>

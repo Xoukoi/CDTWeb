@@ -49,11 +49,57 @@
     <Reference Include="BouncyCastle.Crypto, Version=1.8.6.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
       <HintPath>..\packages\BouncyCastle.1.8.6.1\lib\BouncyCastle.Crypto.dll</HintPath>
     </Reference>
+    <Reference Include="FusionCharts.DataEngine, Version=1.0.8.0, Culture=neutral, PublicKeyToken=e6b8110d59760a80, processorArchitecture=MSIL">
+      <HintPath>..\packages\FusionCharts.Visualization.1.0.9\lib\net45\FusionCharts.DataEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="FusionCharts.SharpVectors.Converters, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b532964b8548be77, processorArchitecture=MSIL">
+      <HintPath>..\packages\FusionCharts.Visualization.1.0.9\lib\net45\FusionCharts.SharpVectors.Converters.dll</HintPath>
+    </Reference>
+    <Reference Include="FusionCharts.SharpVectors.Core, Version=0.3.1.29789, Culture=neutral, PublicKeyToken=7407205e337c98ef, processorArchitecture=MSIL">
+      <HintPath>..\packages\FusionCharts.Visualization.1.0.9\lib\net45\FusionCharts.SharpVectors.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="FusionCharts.SharpVectors.Css, Version=0.3.1.29790, Culture=neutral, PublicKeyToken=7a46e3f532fdb787, processorArchitecture=MSIL">
+      <HintPath>..\packages\FusionCharts.Visualization.1.0.9\lib\net45\FusionCharts.SharpVectors.Css.dll</HintPath>
+    </Reference>
+    <Reference Include="FusionCharts.SharpVectors.Dom, Version=0.3.1.29789, Culture=neutral, PublicKeyToken=517340b6277b1a7a, processorArchitecture=MSIL">
+      <HintPath>..\packages\FusionCharts.Visualization.1.0.9\lib\net45\FusionCharts.SharpVectors.Dom.dll</HintPath>
+    </Reference>
+    <Reference Include="FusionCharts.SharpVectors.Model, Version=0.3.1.29790, Culture=neutral, PublicKeyToken=2236cfc76b505845, processorArchitecture=MSIL">
+      <HintPath>..\packages\FusionCharts.Visualization.1.0.9\lib\net45\FusionCharts.SharpVectors.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="FusionCharts.SharpVectors.Rendering.Wpf, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d0902381100df30e, processorArchitecture=MSIL">
+      <HintPath>..\packages\FusionCharts.Visualization.1.0.9\lib\net45\FusionCharts.SharpVectors.Rendering.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="FusionCharts.SharpVectors.Runtime, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d16e717f0a981fb9, processorArchitecture=MSIL">
+      <HintPath>..\packages\FusionCharts.Visualization.1.0.9\lib\net45\FusionCharts.SharpVectors.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="FusionCharts.Visualization, Version=1.0.8.0, Culture=neutral, PublicKeyToken=e6b8110d59760a80, processorArchitecture=MSIL">
+      <HintPath>..\packages\FusionCharts.Visualization.1.0.9\lib\net45\FusionCharts.Visualization.dll</HintPath>
+    </Reference>
     <Reference Include="itextsharp, Version=5.5.13.2, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
       <HintPath>..\packages\iTextSharp.5.5.13.2\lib\itextsharp.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="MindFusion.Charting.Wpf, Version=2.2.0.400, Culture=neutral, PublicKeyToken=dd7449df9ffcc455, processorArchitecture=MSIL">
+      <HintPath>..\packages\MindFusion.Reporting.Wpf.1.4.2\lib\net40\MindFusion.Charting.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="MindFusion.Licensing, Version=1.0.6.400, Culture=neutral, PublicKeyToken=9d02e21d957ddaef, processorArchitecture=MSIL">
+      <HintPath>..\packages\MindFusion.Reporting.Wpf.1.4.2\lib\net40\MindFusion.Licensing.dll</HintPath>
+    </Reference>
+    <Reference Include="MindFusion.Reporting.Wpf, Version=1.4.2.400, Culture=neutral, PublicKeyToken=dd7449df9ffcc455, processorArchitecture=MSIL">
+      <HintPath>..\packages\MindFusion.Reporting.Wpf.1.4.2\lib\net40\MindFusion.Reporting.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="Oracle.DataAccess, Version=4.122.18.3, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=AMD64" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="Rotativa, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Rotativa.1.7.3\lib\net461\Rotativa.dll</HintPath>
+    </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.DataVisualization" />
@@ -66,6 +112,24 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -73,6 +137,7 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
@@ -88,6 +153,7 @@
     <Content Include="bootstrap\js\bootstrap.js" />
     <Content Include="bootstrap\js\bootstrap.min.js" />
     <Content Include="bootstrap\js\npm.js" />
+    <Content Include="App_Browsers\qt.browser" />
     <Content Include="Connected Services\ServiceReference1\Portafo1.ServiceReference1.AgregarEjecucionResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -217,6 +283,12 @@
     <Content Include="Connected Services\ServiceReference1\Portafo1.ServiceReference1.ProcesoN.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\ServiceReference1\Portafo1.ServiceReference1.reasignarEjecucionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceReference1\Portafo1.ServiceReference1.ReporteFinalResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <Content Include="Connected Services\ServiceReference1\Portafo1.ServiceReference1.ReporteListarEjecucionesAceptadasResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -240,6 +312,7 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <Content Include="css\styles.css" />
+    <Content Include="FusionChartsExportHandler\FCExporter.aspx" />
     <Content Include="imgs\23.png" />
     <Content Include="CrearProceso.aspx" />
     <Content Include="Global.asax" />
@@ -740,8 +813,38 @@
     <Content Include="plugins\timepicker\bootstrap-timepicker.min.css" />
     <Content Include="plugins\timepicker\bootstrap-timepicker.min.js" />
     <Content Include="InicioFuncionarioJefe.aspx" />
+    <Content Include="Reporte.aspx" />
+    <Content Include="ReporteFuncionario.aspx" />
+    <Content Include="ReporteTareas.aspx" />
+    <Content Include="Rotativa\help-wkhtmltoimage.txt" />
+    <Content Include="Rotativa\help-wkhtmltopdf.txt" />
+    <Content Include="Rotativa\wkhtmltoimage.exe" />
+    <Content Include="Rotativa\wkhtmltopdf.exe" />
+    <Content Include="Scripts\FusionCharts\fusioncharts.charts.js" />
+    <Content Include="Scripts\FusionCharts\fusioncharts.excelexport.js" />
+    <Content Include="Scripts\FusionCharts\fusioncharts.gantt.js" />
+    <Content Include="Scripts\FusionCharts\fusioncharts.js" />
+    <Content Include="Scripts\FusionCharts\fusioncharts.maps.js" />
+    <Content Include="Scripts\FusionCharts\fusioncharts.overlappedbar2d.js" />
+    <Content Include="Scripts\FusionCharts\fusioncharts.overlappedcolumn2d.js" />
+    <Content Include="Scripts\FusionCharts\fusioncharts.powercharts.js" />
+    <Content Include="Scripts\FusionCharts\fusioncharts.timeseries.js" />
+    <Content Include="Scripts\FusionCharts\fusioncharts.treemap.js" />
+    <Content Include="Scripts\FusionCharts\fusioncharts.vml.js" />
+    <Content Include="Scripts\FusionCharts\fusioncharts.widgets.js" />
+    <Content Include="Scripts\FusionCharts\fusioncharts.zoomline.js" />
+    <Content Include="Scripts\FusionCharts\fusioncharts.zoomscatter.js" />
+    <Content Include="Scripts\FusionCharts\themes\fusioncharts.theme.candy.js" />
+    <Content Include="Scripts\FusionCharts\themes\fusioncharts.theme.carbon.js" />
+    <Content Include="Scripts\FusionCharts\themes\fusioncharts.theme.fint.js" />
+    <Content Include="Scripts\FusionCharts\themes\fusioncharts.theme.fusion.js" />
+    <Content Include="Scripts\FusionCharts\themes\fusioncharts.theme.gammel.js" />
+    <Content Include="Scripts\FusionCharts\themes\fusioncharts.theme.ocean.js" />
+    <Content Include="Scripts\FusionCharts\themes\fusioncharts.theme.umber.js" />
+    <Content Include="Scripts\FusionCharts\themes\fusioncharts.theme.zune.js" />
     <Content Include="TareasAsignadasJefe.aspx" />
     <Content Include="TareasHistoricas.aspx" />
+    <Content Include="TareasPorFuncionario.aspx" />
     <Content Include="Web.config" />
     <Content Include="Login.aspx" />
   </ItemGroup>
@@ -764,6 +867,10 @@
     </Compile>
     <Compile Include="CrearProceso.aspx.designer.cs">
       <DependentUpon>CrearProceso.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FusionChartsExportHandler\FCExporter.aspx.cs">
+      <DependentUpon>FCExporter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -797,6 +904,27 @@
     <Compile Include="InicioFuncionarioJefe.aspx.designer.cs">
       <DependentUpon>InicioFuncionarioJefe.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Reporte.aspx.cs">
+      <DependentUpon>Reporte.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reporte.aspx.designer.cs">
+      <DependentUpon>Reporte.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteFuncionario.aspx.cs">
+      <DependentUpon>ReporteFuncionario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReporteFuncionario.aspx.designer.cs">
+      <DependentUpon>ReporteFuncionario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteTareas.aspx.cs">
+      <DependentUpon>ReporteTareas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReporteTareas.aspx.designer.cs">
+      <DependentUpon>ReporteTareas.aspx</DependentUpon>
+    </Compile>
     <Compile Include="TareasAsignadasJefe.aspx.cs">
       <DependentUpon>TareasAsignadasJefe.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -817,6 +945,13 @@
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TareasPorFuncionario.aspx.cs">
+      <DependentUpon>TareasPorFuncionario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TareasPorFuncionario.aspx.designer.cs">
+      <DependentUpon>TareasPorFuncionario.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

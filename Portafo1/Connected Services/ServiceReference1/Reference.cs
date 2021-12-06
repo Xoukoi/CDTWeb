@@ -1119,6 +1119,13 @@ namespace Portafo1.ServiceReference1 {
         System.Threading.Tasks.Task<Portafo1.ServiceReference1.ReporteListarEjecucionesatiempoResponse> ReporteListarEjecucionesatiempoAsync(Portafo1.ServiceReference1.ReporteListarEjecucionesatiempoRequest request);
         
         // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento rut del espacio de nombres http://tempuri.org/ no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ReporteFinal", ReplyAction="*")]
+        Portafo1.ServiceReference1.ReporteFinalResponse ReporteFinal(Portafo1.ServiceReference1.ReporteFinalRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ReporteFinal", ReplyAction="*")]
+        System.Threading.Tasks.Task<Portafo1.ServiceReference1.ReporteFinalResponse> ReporteFinalAsync(Portafo1.ServiceReference1.ReporteFinalRequest request);
+        
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento rut del espacio de nombres http://tempuri.org/ no está marcado para aceptar valores nil.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ListarEjecucionesTerminadas", ReplyAction="*")]
         Portafo1.ServiceReference1.ListarEjecucionesTerminadasResponse ListarEjecucionesTerminadas(Portafo1.ServiceReference1.ListarEjecucionesTerminadasRequest request);
         
@@ -1292,6 +1299,13 @@ namespace Portafo1.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/eliminarrProce", ReplyAction="*")]
         System.Threading.Tasks.Task<Portafo1.ServiceReference1.eliminarrProceResponse> eliminarrProceAsync(Portafo1.ServiceReference1.eliminarrProceRequest request);
+        
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento rut del espacio de nombres http://tempuri.org/ no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/reasignarEjecucion", ReplyAction="*")]
+        Portafo1.ServiceReference1.reasignarEjecucionResponse reasignarEjecucion(Portafo1.ServiceReference1.reasignarEjecucionRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/reasignarEjecucion", ReplyAction="*")]
+        System.Threading.Tasks.Task<Portafo1.ServiceReference1.reasignarEjecucionResponse> reasignarEjecucionAsync(Portafo1.ServiceReference1.reasignarEjecucionRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -2416,6 +2430,82 @@ namespace Portafo1.ServiceReference1 {
         
         public ReporteListarEjecucionesatiempoResponseBody(Portafo1.ServiceReference1.EjecucionN[] ReporteListarEjecucionesatiempoResult) {
             this.ReporteListarEjecucionesatiempoResult = ReporteListarEjecucionesatiempoResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class ReporteFinalRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="ReporteFinal", Namespace="http://tempuri.org/", Order=0)]
+        public Portafo1.ServiceReference1.ReporteFinalRequestBody Body;
+        
+        public ReporteFinalRequest() {
+        }
+        
+        public ReporteFinalRequest(Portafo1.ServiceReference1.ReporteFinalRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class ReporteFinalRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string rut;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=1)]
+        public int ano;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=2)]
+        public int mes;
+        
+        public ReporteFinalRequestBody() {
+        }
+        
+        public ReporteFinalRequestBody(string rut, int ano, int mes) {
+            this.rut = rut;
+            this.ano = ano;
+            this.mes = mes;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class ReporteFinalResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="ReporteFinalResponse", Namespace="http://tempuri.org/", Order=0)]
+        public Portafo1.ServiceReference1.ReporteFinalResponseBody Body;
+        
+        public ReporteFinalResponse() {
+        }
+        
+        public ReporteFinalResponse(Portafo1.ServiceReference1.ReporteFinalResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class ReporteFinalResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public Portafo1.ServiceReference1.EjecucionN[] ReporteFinalResult;
+        
+        public ReporteFinalResponseBody() {
+        }
+        
+        public ReporteFinalResponseBody(Portafo1.ServiceReference1.EjecucionN[] ReporteFinalResult) {
+            this.ReporteFinalResult = ReporteFinalResult;
         }
     }
     
@@ -4069,6 +4159,75 @@ namespace Portafo1.ServiceReference1 {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class reasignarEjecucionRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="reasignarEjecucion", Namespace="http://tempuri.org/", Order=0)]
+        public Portafo1.ServiceReference1.reasignarEjecucionRequestBody Body;
+        
+        public reasignarEjecucionRequest() {
+        }
+        
+        public reasignarEjecucionRequest(Portafo1.ServiceReference1.reasignarEjecucionRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class reasignarEjecucionRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public int id;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+        public string rut;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+        public string notificacion;
+        
+        public reasignarEjecucionRequestBody() {
+        }
+        
+        public reasignarEjecucionRequestBody(int id, string rut, string notificacion) {
+            this.id = id;
+            this.rut = rut;
+            this.notificacion = notificacion;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class reasignarEjecucionResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="reasignarEjecucionResponse", Namespace="http://tempuri.org/", Order=0)]
+        public Portafo1.ServiceReference1.reasignarEjecucionResponseBody Body;
+        
+        public reasignarEjecucionResponse() {
+        }
+        
+        public reasignarEjecucionResponse(Portafo1.ServiceReference1.reasignarEjecucionResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class reasignarEjecucionResponseBody {
+        
+        public reasignarEjecucionResponseBody() {
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface WebService1SoapChannel : Portafo1.ServiceReference1.WebService1Soap, System.ServiceModel.IClientChannel {
     }
@@ -4523,6 +4682,35 @@ namespace Portafo1.ServiceReference1 {
             inValue.Body.ano = ano;
             inValue.Body.mes = mes;
             return ((Portafo1.ServiceReference1.WebService1Soap)(this)).ReporteListarEjecucionesatiempoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Portafo1.ServiceReference1.ReporteFinalResponse Portafo1.ServiceReference1.WebService1Soap.ReporteFinal(Portafo1.ServiceReference1.ReporteFinalRequest request) {
+            return base.Channel.ReporteFinal(request);
+        }
+        
+        public Portafo1.ServiceReference1.EjecucionN[] ReporteFinal(string rut, int ano, int mes) {
+            Portafo1.ServiceReference1.ReporteFinalRequest inValue = new Portafo1.ServiceReference1.ReporteFinalRequest();
+            inValue.Body = new Portafo1.ServiceReference1.ReporteFinalRequestBody();
+            inValue.Body.rut = rut;
+            inValue.Body.ano = ano;
+            inValue.Body.mes = mes;
+            Portafo1.ServiceReference1.ReporteFinalResponse retVal = ((Portafo1.ServiceReference1.WebService1Soap)(this)).ReporteFinal(inValue);
+            return retVal.Body.ReporteFinalResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Portafo1.ServiceReference1.ReporteFinalResponse> Portafo1.ServiceReference1.WebService1Soap.ReporteFinalAsync(Portafo1.ServiceReference1.ReporteFinalRequest request) {
+            return base.Channel.ReporteFinalAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Portafo1.ServiceReference1.ReporteFinalResponse> ReporteFinalAsync(string rut, int ano, int mes) {
+            Portafo1.ServiceReference1.ReporteFinalRequest inValue = new Portafo1.ServiceReference1.ReporteFinalRequest();
+            inValue.Body = new Portafo1.ServiceReference1.ReporteFinalRequestBody();
+            inValue.Body.rut = rut;
+            inValue.Body.ano = ano;
+            inValue.Body.mes = mes;
+            return ((Portafo1.ServiceReference1.WebService1Soap)(this)).ReporteFinalAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -5141,6 +5329,34 @@ namespace Portafo1.ServiceReference1 {
             inValue.Body = new Portafo1.ServiceReference1.eliminarrProceRequestBody();
             inValue.Body.nu = nu;
             return ((Portafo1.ServiceReference1.WebService1Soap)(this)).eliminarrProceAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Portafo1.ServiceReference1.reasignarEjecucionResponse Portafo1.ServiceReference1.WebService1Soap.reasignarEjecucion(Portafo1.ServiceReference1.reasignarEjecucionRequest request) {
+            return base.Channel.reasignarEjecucion(request);
+        }
+        
+        public void reasignarEjecucion(int id, string rut, string notificacion) {
+            Portafo1.ServiceReference1.reasignarEjecucionRequest inValue = new Portafo1.ServiceReference1.reasignarEjecucionRequest();
+            inValue.Body = new Portafo1.ServiceReference1.reasignarEjecucionRequestBody();
+            inValue.Body.id = id;
+            inValue.Body.rut = rut;
+            inValue.Body.notificacion = notificacion;
+            Portafo1.ServiceReference1.reasignarEjecucionResponse retVal = ((Portafo1.ServiceReference1.WebService1Soap)(this)).reasignarEjecucion(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Portafo1.ServiceReference1.reasignarEjecucionResponse> Portafo1.ServiceReference1.WebService1Soap.reasignarEjecucionAsync(Portafo1.ServiceReference1.reasignarEjecucionRequest request) {
+            return base.Channel.reasignarEjecucionAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Portafo1.ServiceReference1.reasignarEjecucionResponse> reasignarEjecucionAsync(int id, string rut, string notificacion) {
+            Portafo1.ServiceReference1.reasignarEjecucionRequest inValue = new Portafo1.ServiceReference1.reasignarEjecucionRequest();
+            inValue.Body = new Portafo1.ServiceReference1.reasignarEjecucionRequestBody();
+            inValue.Body.id = id;
+            inValue.Body.rut = rut;
+            inValue.Body.notificacion = notificacion;
+            return ((Portafo1.ServiceReference1.WebService1Soap)(this)).reasignarEjecucionAsync(inValue);
         }
     }
 }

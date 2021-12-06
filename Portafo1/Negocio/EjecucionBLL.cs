@@ -106,6 +106,43 @@ namespace Portafo1.Negocio
 
         }
 
+        public List<EjecucionBLL> ReporteFinal(string rut, int ano, int mes)
+        {
+            ServiceReference1.WebService1SoapClient wcf = new ServiceReference1.WebService1SoapClient();
+            List<EjecucionBLL> lista = new List<EjecucionBLL>();
+
+            string tipo = "";
+
+            foreach (var item in wcf.ReporteFinal(rut, ano, mes))
+            {
+
+                EjecucionBLL otro = new EjecucionBLL();
+                otro.idEjecu = item.idEjec;
+                otro.descripcionEje = item.descrip;
+                otro.fechaInicio = item.fechaInicio;
+                otro.fechaTermino = item.fechaTermino;
+                otro.semaforo = item.semaforo;
+                otro.notficacion = item.notifi;
+                if (item.tipota == 1)
+                {
+                    tipo = "Normal";
+                }
+                else
+                {
+                    tipo = "Tarea de flujo";
+                }
+                otro.tipotarea = tipo;
+                otro.nombreTarea = item.nombreta;
+                otro.descripcionTarea = item.descripcionTar;
+                otro.observacionTarea = item.observacionTar;
+                otro.adjudicador = item.rutAdjudicador;
+                lista.Add(otro);
+
+            }
+            return lista;
+
+        }
+
         public List<EjecucionBLL> listaEjecucionesAceptadas(string rut)
         {
             ServiceReference1.WebService1SoapClient wcf = new ServiceReference1.WebService1SoapClient();
@@ -450,6 +487,13 @@ namespace Portafo1.Negocio
             ServiceReference1.WebService1SoapClient wcf = new ServiceReference1.WebService1SoapClient();
             ServiceReference1.EjecucionN ejecu = new ServiceReference1.EjecucionN();
             wcf.cambiarEstadoEjecucion(item);
+        }
+
+        public void ReasignarTarea(int id, string rut, string notificacion)
+        {
+            ServiceReference1.WebService1SoapClient wcf = new ServiceReference1.WebService1SoapClient();
+            ServiceReference1.EjecucionN ejecu = new ServiceReference1.EjecucionN();
+            wcf.reasignarEjecucion(id, rut, notificacion);
         }
 
     }

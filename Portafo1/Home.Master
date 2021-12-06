@@ -1,65 +1,78 @@
-﻿
-<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Home.master.cs" Inherits="Portafo1.Home" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Home.master.cs" Inherits="Portafo1.Home" %>
 
 <!DOCTYPE html>
 <html>
-    
-<head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Process S.A. - Control de tareas</title>
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <!-- Bootstrap icons-->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
-      <style type="text/css">
-          .fondo{
-              background-color:black;
-              filter: opacity(50%);
-              opacity:0.8;
-              z-index:10000;
-          }
-          .padre {
 
-               text-align: center;
-          }
-      </style>
-          <asp:ContentPlaceHolder ID="head" runat="server">
-                  </asp:ContentPlaceHolder>
-    </head>
-    <body class="d-flex flex-column h-100">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Process S.A. - Control de tareas</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <style type="text/css">
+        .fondo {
+            background-color: black;
+            filter: opacity(50%);
+            opacity: 0.8;
+            z-index: 10000;
+        }
+
+        .padre {
+            text-align: center;
+        }
+
+        .scrollable-table {
+              display: block;
+              max-width: -moz-fit-content;
+              max-width: fit-content;
+              margin: 0 auto;
+              overflow-x: auto;
+              white-space: nowrap;
+        }
+        .footer {
+
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+}
+
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="d-flex flex-column h-100">
     <form id="form1" runat="server">
 
         <main class="flex-shrink-0">
             <!-- Navigation-->
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #451a5b">
                 <div class="container px-5">
-                    <a class="navbar-brand">Personal</a>
+                    <a class="navbar-brand"><img style="width: 10%; margin-right: 30px" src="./imgs/logo.jpg"/> Personal </a>
 
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                             <li class="nav-item"><a class="nav-link" href="TareasAsignadasJefe.aspx">Tareas asignadas</a></li>
                             <li class="nav-item"><a class="nav-link" href="TareasHistoricas.aspx">Tareas historicas</a></li>
-            <asp:Panel ID="Panel4" runat="server">
-   <li class="nav-item"><a class="nav-link" href="InicioFuncionarioJefe.aspx">Crear y asignar tareas</a></li>
-              </asp:Panel>
+                            <li class="nav-item"><a class="nav-link" href="ReporteTareas.aspx">Reportes  </a></li>
+                            <asp:Panel ID="Panel4" runat="server">
+                                <li class="nav-item"><a class="nav-link" href="InicioFuncionarioJefe.aspx">Crear y asignar tareas</a></li>
+                            </asp:Panel>
 
-              <asp:Panel ID="Panel99" runat="server">
-                   
-              </asp:Panel>
+                            <asp:Panel ID="Panel99" runat="server">
+                            </asp:Panel>
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" id="navbarDropdownPortfolio" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">                    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
-                    <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label></a>
+                                <a class="nav-link dropdown-toggle" id="navbarDropdownPortfolio" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+                                    <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label></a>
                                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownPortfolio">
-
-
-                        <asp:Button ID="Button1" runat="server" Text="Cerrar sesión" OnClick="Button1_Click" Class="btn btn-warning"/>
-
+                                    <asp:Button ID="Button1" runat="server" Text="Cerrar sesión" OnClick="Button1_Click" Class="btn btn-warning"  style="margin-left: 12%"/>
 
                                 </ul>
                             </li>
@@ -68,47 +81,36 @@
                 </div>
             </nav>
             <!-- Header-->
-            <header class="bg-dark py-5">
-                <div class="container px-5">
-                    <div class="row gx-5 align-items-center justify-content-center">
-                        <div class="col-lg-8 col-xl-7 col-xxl-6">
-                            <div class="my-5 text-center text-xl-start">
-                                <h1 class="display-5 fw-bolder text-white mb-2">Control de tareas</h1>
-                            </div>
-                        </div>
-                        <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center">
-                            <img src="imgs/23.png" /></div>
-                    </div>
-                </div>
-            </header>
+
             <!-- Features section-->
             <section class="py-5" id="features">
                 <div class="container px-5 my-5">
                     <div class="row gx-5">
                         <div class="col-lg-8">
-                                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-            </asp:ContentPlaceHolder>
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                            </asp:ContentPlaceHolder>
                         </div>
                     </div>
                 </div>
             </section>
 
             <script>
-                const lacosa = document.getElementsByClassName('semaforo');
-                console.log('hola');
-                for (let i = 0; i < lacosa.length; i++) {
-                    console.log(lacosa[i].innerHTML);
-                    let color = lacosa[i].textContent;
-                    lacosa[i].style.background = color;
-                    lacosa[i].style.color = color;
+                const semaforo = document.getElementsByClassName('semaforo');
+                for (let i = 0; i < semaforo.length; i++) {
+                    let color = semaforo[i].textContent;
+                    semaforo[i].style.background = color;
+                    semaforo[i].style.color = color;
                 }
             </script>
         </main>
         <!-- Footer-->
-        <footer class="bg-dark py-4 mt-auto">
+        <div class="footer">
+            <footer class="py-4 mt-auto" style="background-color: #451a5b">
             <div class="container px-5">
                 <div class="row align-items-center justify-content-between flex-column flex-sm-row">
-                    <div class="col-auto"><div class="small m-0 text-white">Copyright &copy; Your Website 2021</div></div>
+                    <div class="col-auto">
+                        <div class="small m-0 text-white">Copyright &copy; Your Website 2021</div>
+                    </div>
                     <div class="col-auto">
                         <a class="link-light small" href="#!">Privacy</a>
                         <span class="text-white mx-1">&middot;</span>
@@ -118,14 +120,15 @@
                     </div>
                 </div>
             </div>
-            
+
         </footer>
+        </div>
+        
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
-        </form>
-    </body>
+    </form>
+</body>
 
 
 </html>
-   

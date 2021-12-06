@@ -17,6 +17,7 @@ namespace Portafo1
             Application["idejecucionglobal"] = 0;
             Application["idejecucionglobal2"] = 0;
             Application["idejecucionglobal3"] = 0;
+            Application["idejecucionglobal4"] = 0;
             Application["rut"] = "3";
 
             Application["ReRutAcep"] = "3";
@@ -25,6 +26,14 @@ namespace Portafo1
 
             Application["ati"] = 0;
             Application["atra"] = 0;
+
+            Application["acep"] = 0;
+            Application["recha"] = 0;
+
+            Application["repoNombre"] = 0;
+
+            Application["repoApellido"] = 0;
+            Application["repoCorreo"] = 0;
 
             Application["rutrepo"] = "s";
             Application["nombrepo"] = "Pedro bautista";

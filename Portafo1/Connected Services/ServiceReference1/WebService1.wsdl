@@ -272,6 +272,22 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="ReporteFinal">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="rut" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ano" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="mes" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReporteFinalResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ReporteFinalResult" type="tns:ArrayOfEjecucionN" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="ListarEjecucionesTerminadas">
         <s:complexType>
           <s:sequence>
@@ -635,6 +651,18 @@
       <s:element name="eliminarrProceResponse">
         <s:complexType />
       </s:element>
+      <s:element name="reasignarEjecucion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="rut" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="notificacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="reasignarEjecucionResponse">
+        <s:complexType />
+      </s:element>
     </s:schema>
   </wsdl:types>
   <wsdl:message name="AgregarTarSoapIn">
@@ -738,6 +766,12 @@
   </wsdl:message>
   <wsdl:message name="ReporteListarEjecucionesatiempoSoapOut">
     <wsdl:part name="parameters" element="tns:ReporteListarEjecucionesatiempoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReporteFinalSoapIn">
+    <wsdl:part name="parameters" element="tns:ReporteFinal" />
+  </wsdl:message>
+  <wsdl:message name="ReporteFinalSoapOut">
+    <wsdl:part name="parameters" element="tns:ReporteFinalResponse" />
   </wsdl:message>
   <wsdl:message name="ListarEjecucionesTerminadasSoapIn">
     <wsdl:part name="parameters" element="tns:ListarEjecucionesTerminadas" />
@@ -889,6 +923,12 @@
   <wsdl:message name="eliminarrProceSoapOut">
     <wsdl:part name="parameters" element="tns:eliminarrProceResponse" />
   </wsdl:message>
+  <wsdl:message name="reasignarEjecucionSoapIn">
+    <wsdl:part name="parameters" element="tns:reasignarEjecucion" />
+  </wsdl:message>
+  <wsdl:message name="reasignarEjecucionSoapOut">
+    <wsdl:part name="parameters" element="tns:reasignarEjecucionResponse" />
+  </wsdl:message>
   <wsdl:portType name="WebService1Soap">
     <wsdl:operation name="AgregarTar">
       <wsdl:input message="tns:AgregarTarSoapIn" />
@@ -957,6 +997,10 @@
     <wsdl:operation name="ReporteListarEjecucionesatiempo">
       <wsdl:input message="tns:ReporteListarEjecucionesatiempoSoapIn" />
       <wsdl:output message="tns:ReporteListarEjecucionesatiempoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReporteFinal">
+      <wsdl:input message="tns:ReporteFinalSoapIn" />
+      <wsdl:output message="tns:ReporteFinalSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="ListarEjecucionesTerminadas">
       <wsdl:input message="tns:ListarEjecucionesTerminadasSoapIn" />
@@ -1057,6 +1101,10 @@
     <wsdl:operation name="eliminarrProce">
       <wsdl:input message="tns:eliminarrProceSoapIn" />
       <wsdl:output message="tns:eliminarrProceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="reasignarEjecucion">
+      <wsdl:input message="tns:reasignarEjecucionSoapIn" />
+      <wsdl:output message="tns:reasignarEjecucionSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="WebService1Soap" type="tns:WebService1Soap">
@@ -1207,6 +1255,15 @@
     </wsdl:operation>
     <wsdl:operation name="ReporteListarEjecucionesatiempo">
       <soap:operation soapAction="http://tempuri.org/ReporteListarEjecucionesatiempo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReporteFinal">
+      <soap:operation soapAction="http://tempuri.org/ReporteFinal" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1439,6 +1496,15 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="reasignarEjecucion">
+      <soap:operation soapAction="http://tempuri.org/reasignarEjecucion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="WebService1Soap12" type="tns:WebService1Soap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
@@ -1588,6 +1654,15 @@
     </wsdl:operation>
     <wsdl:operation name="ReporteListarEjecucionesatiempo">
       <soap12:operation soapAction="http://tempuri.org/ReporteListarEjecucionesatiempo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReporteFinal">
+      <soap12:operation soapAction="http://tempuri.org/ReporteFinal" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -1813,6 +1888,15 @@
     </wsdl:operation>
     <wsdl:operation name="eliminarrProce">
       <soap12:operation soapAction="http://tempuri.org/eliminarrProce" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="reasignarEjecucion">
+      <soap12:operation soapAction="http://tempuri.org/reasignarEjecucion" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

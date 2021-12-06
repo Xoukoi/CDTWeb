@@ -355,18 +355,18 @@ namespace Portafo1
                             smtp.Credentials = new NetworkCredential("controldetareas2021duoc@gmail.com", "controldetareas2021");
                             smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
                             smtp.EnableSsl = true;
-                            
 
-                            string body = "<body>" +
-        " Se le ha asignado una nueva tarea" +
 
-           "< span > Todos los detalles en processSA.com </ span >" +
+                            string body = "  " +
+" Se le ha asignado una nueva tarea   " +
 
-              "< br />" +
+"  todos los detalles en processSA.com  " +
 
-              "< span > Buenas gestiones - Process S.A.</ span >" +
+"  " +
 
-            " </ body > ";
+"  Buenas gestiones - Process S.A.    " +
+
+"  No responder este correo ";
 
 
                             MailMessage mail = new MailMessage();
