@@ -12,7 +12,10 @@ namespace Portafo1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            PersonalBLL perso = new PersonalBLL();
 
+            GridView7.DataSource = perso.listarPersonalAso(Session["rut"].ToString());
+            GridView7.DataBind();
         }
 
         protected void Button1_Click1(object sender, EventArgs e)

@@ -320,6 +320,7 @@
     <Content Include="imgs\logo.jpg" />
     <Content Include="index.html" />
     <Content Include="index2.html" />
+    <Content Include="JavaScript.js" />
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\npm.js" />

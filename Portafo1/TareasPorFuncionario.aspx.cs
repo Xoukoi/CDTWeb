@@ -61,7 +61,7 @@ namespace Portafo1
         }
         public string rut()
         {
-            return Application["ReRutAcep"].ToString();
+            return Application["rutrepo"].ToString(); ;
         }
         public int ano()
         {
@@ -108,17 +108,7 @@ namespace Portafo1
             return Application["repoNombre"].ToString();
         }
 
-        protected void GridView1_PageIndexChanging(object sender, GridViewPageEventArgs e)
-        {
-            //EjecucionBLL nuev = new EjecucionBLL();
-            //GridView1.PageIndex = e.NewPageIndex;
-            //GridView1.DataSource = nuev.listaEjecucionesPorConfirmar(Session["rut"].ToString());
-            //GridView1.DataBind();
-        }
-        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
-        }
 
 
         protected void Button1_Click(object sender, EventArgs e)
