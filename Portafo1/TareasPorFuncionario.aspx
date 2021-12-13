@@ -4,7 +4,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
     <div class="padre">
-                    <h1>Grafico de barras</h1>
+                    <h1>Grafico de apoyo</h1>
     </div>
                 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
@@ -40,7 +40,7 @@
     <br />
     <asp:Panel ID="descargarPDF" runat="server">
         <div class="padre">
-                    <h1>Reporte generado por PROCESS S.A.</h1>
+                    <h1>Reporte generado por PROCESSSA.com</h1>
             <h3>Fecha y hora actual: <%=dia()%> / <%=hora()%></h3>
             <br />
     </div>
